@@ -10,11 +10,11 @@ function Hexastore() {
   this.ops = {};
 }
 
-Hexastore.prototype.save = function(dbname) {
+Hexastore.prototype.export = function(dbname) {
   fs.writeFileSync(dbname + ".json", JSON.stringify(this.spo));
 }
 
-Hexastore.prototype.saveZip = function(dbname) {
+Hexastore.prototype.exportZip = function(dbname) {
   // creating archives
   var zip = new AZip();
   // add file directly
@@ -24,7 +24,7 @@ Hexastore.prototype.saveZip = function(dbname) {
 }
 
 
-Hexastore.prototype.open = function(dbname) {
+Hexastore.prototype.import = function(dbname) {
   try {
     this.addSPO(JSON.parse(fs.readFileSync(dbname + ".json")));
   } catch (err) {
@@ -32,7 +32,7 @@ Hexastore.prototype.open = function(dbname) {
   }
 }
 
-Hexastore.prototype.openZip = function(dbname) {
+Hexastore.prototype.importZip = function(dbname) {
   var zip = new AZip(dbname + ".zip");
   // outputs the content of some_folder/my_file.txt
   this.addSPO(JSON.parse(zip.readAsText("data.json")));
