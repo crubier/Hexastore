@@ -1,6 +1,6 @@
 {
   "name": "hexastore",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A fast, pure javascript implementation of the hexatore RDF triple store, also useful as a graph database",
   "main": "index.js",
   "scripts": {
