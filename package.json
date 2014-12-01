@@ -1,0 +1,33 @@
+{
+  "name": "Hexastore",
+  "version": "0.1.0",
+  "description": "A pure javascript implementation of the hexatore RDF triple store, also useful as a graph database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crubier/hexastore.git"
+  },
+  "keywords": [
+    "hexastore",
+    "rdf",
+    "graph",
+    "database",
+    "json",
+    "triple",
+    "triplestore",
+    "pure",
+    "js"
+  ],
+  "author": "Vincent Lecrubier <vincent.lecrubier@gmail.com> (http://www.vincentlecrubier.fr/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crubier/hexastore/issues"
+  },
+  "homepage": "https://github.com/crubier/hexastore",
+  "dependencies": {
+    "adm-zip": "^0.4.4"
+  }
+}
