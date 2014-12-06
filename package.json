@@ -4,7 +4,7 @@
   "description": "A fast, pure javascript implementation of the hexatore RDF triple store, also useful as a graph database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",

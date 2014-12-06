@@ -10,10 +10,12 @@ function Hexastore() {
   this.ops = {};
 }
 
+// Export a database to import with import
 Hexastore.prototype.export = function(dbname) {
   fs.writeFileSync(dbname + ".json", JSON.stringify(this.spo));
 }
 
+// Export a database to import with importZip
 Hexastore.prototype.exportZip = function(dbname) {
   // creating archives
   var zip = new AZip();
@@ -23,7 +25,7 @@ Hexastore.prototype.exportZip = function(dbname) {
   zip.writeZip(dbname + ".zip");
 }
 
-
+// Import a database previously exported with export
 Hexastore.prototype.import = function(dbname) {
   try {
     this.addSPO(JSON.parse(fs.readFileSync(dbname + ".json")));
@@ -32,10 +34,48 @@ Hexastore.prototype.import = function(dbname) {
   }
 }
 
+// Import a database previously exported with exportZip
 Hexastore.prototype.importZip = function(dbname) {
   var zip = new AZip(dbname + ".zip");
   // outputs the content of some_folder/my_file.txt
   this.addSPO(JSON.parse(zip.readAsText("data.json")));
+}
+
+// Import a database in a NT file
+Hexastore.prototype.importNt = function(ntname,callback) {
+  function readLines(input, func) {
+    var remaining = '';
+
+    input.on('data', function(data) {
+      remaining += data;
+      var index = remaining.indexOf('\n');
+      while (index > -1) {
+        var line = remaining.substring(0, index);
+        remaining = remaining.substring(index + 1);
+
+        func(line);
+
+        index = remaining.indexOf('\n');
+      }
+    });
+
+    input.on('end', function() {
+      if (remaining.length > 0) {
+        func(remaining);
+      }
+      callback();
+    });
+  }
+
+  var that = this;
+
+  function func(line) {
+    var elements = line.match(/[^\s"']+|"([^"]*)"|'([^']*)'/g);
+    that.put(elements);
+  }
+
+  var input = fs.createReadStream(ntname+'.nt');
+  readLines(input, func);
 }
 
 // Add a single triple to the store
