@@ -25,6 +25,19 @@ Hexastore.prototype.exportZip = function(dbname) {
   zip.writeZip(dbname + ".zip");
 }
 
+// Todo
+// Export a database to a NT file
+Hexastore.prototype.exportNt = function(ntname) {
+  var res = this.search([['s'],['p'],['o']]);
+  var str = "";
+  for(var i =0;i<res.length;i++) {
+    str = str + res[i]['s'] + ' ' + res[i]['p'] + ' ' + res[i]['o']+' .\n';
+  }
+  fs.writeFileSync(ntname + ".nt", str);
+}
+
+
+
 // Import a database previously exported with export
 Hexastore.prototype.import = function(dbname) {
   try {
@@ -545,59 +558,59 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
 
 
 
-// Query planner
-restrictivity = function(queryTriple) {
-  var s = (queryTriple[0] instanceof Array) ? 0 : 1;
-  var p = (queryTriple[1] instanceof Array) ? 0 : 1;
-  var o = (queryTriple[2] instanceof Array) ? 0 : 1;
-  return s + p + o;
-}
-
-restrictivityCompare = function(a, b) {
-  return restrictivity(b) - restrictivity(a);
-}
-
-entropy = function(varOc) {
-  return function(element) {
-    var res = 0;
-    for (var j = 0; j < 3; j++) {
-      if (element[j] instanceof Array)
-        res = res + varOc[element[j][0]];
-    }
-  }
-}
-
-entropyCompare = function(query) {
-  var entropyfunc = entropy(variableOccurences(query));
-  return function(a, b) {
-    var entropyA = entropyfunc(a);
-    var entropyB = entropyfunc(b);
-    var restrictivityA = restrictivity(a);
-    var restrictivityB = restrictivity(b);
-    if (entropyA !== entropyB) {
-      return entropyB - entropyA;
-    } else {
-      return restrictivityB - restrictivityA;
-    }
-  }
-}
-
-
-variableOccurences = function(query) {
-  var res = {};
-  for (var i = 0; i < query.length; i++) {
-    for (var j = 0; j < 3; j++) {
-      if (query[i][j] instanceof Array) {
-        if (res[query[i][j][0]] === undefined) {
-          res[query[i][j][0]] = 1;
-        } else {
-          res[query[i][j][0]] = res[query[i][j][0]] + 1;
-        }
-      }
-    }
-  }
-  return res;
-}
+// // Query planner
+// restrictivity = function(queryTriple) {
+//   var s = (queryTriple[0] instanceof Array) ? 0 : 1;
+//   var p = (queryTriple[1] instanceof Array) ? 0 : 1;
+//   var o = (queryTriple[2] instanceof Array) ? 0 : 1;
+//   return s + p + o;
+// }
+//
+// restrictivityCompare = function(a, b) {
+//   return restrictivity(b) - restrictivity(a);
+// }
+//
+// entropy = function(varOc) {
+//   return function(element) {
+//     var res = 0;
+//     for (var j = 0; j < 3; j++) {
+//       if (element[j] instanceof Array)
+//         res = res + varOc[element[j][0]];
+//     }
+//   }
+// }
+//
+// entropyCompare = function(query) {
+//   var entropyfunc = entropy(variableOccurences(query));
+//   return function(a, b) {
+//     var entropyA = entropyfunc(a);
+//     var entropyB = entropyfunc(b);
+//     var restrictivityA = restrictivity(a);
+//     var restrictivityB = restrictivity(b);
+//     if (entropyA !== entropyB) {
+//       return entropyB - entropyA;
+//     } else {
+//       return restrictivityB - restrictivityA;
+//     }
+//   }
+// }
+//
+//
+// variableOccurences = function(query) {
+//   var res = {};
+//   for (var i = 0; i < query.length; i++) {
+//     for (var j = 0; j < 3; j++) {
+//       if (query[i][j] instanceof Array) {
+//         if (res[query[i][j][0]] === undefined) {
+//           res[query[i][j][0]] = 1;
+//         } else {
+//           res[query[i][j][0]] = res[query[i][j][0]] + 1;
+//         }
+//       }
+//     }
+//   }
+//   return res;
+// }
 
 // planQuery = function(query) {
 //   var sortedQuery = query;
