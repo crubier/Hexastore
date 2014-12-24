@@ -21,22 +21,22 @@ function() {
 
 });
 
-
-
-[['person'],'born',['city']],
-[['city'],'border',['border']],
-[['border'],'inside','square(0,0,10,10)']
-
-
-
-
-{
-  P:"inside",
-  ___:function(){return["(0,0)","inside","polygon((1,1),(1,-1),(-1,-1),(-1,1))",true]},
-  __O:function(object){return[object.center,"inside",object,true]},
-  _P_:function(predicate){if(predicate=="indisde")return["",predicate,"",true]else},
-  _PO:function(predicate,object){return["",predicate,"",true]},
-}
-
-predicate "inside" = //boolean
-predicate "inside" =function(object){return };
+//
+//
+// [['person'],'born',['city']],
+// [['city'],'border',['border']],
+// [['border'],'inside','square(0,0,10,10)']
+//
+//
+//
+//
+// {
+//   P:"inside",
+//   ___:function(){return["(0,0)","inside","polygon((1,1),(1,-1),(-1,-1),(-1,1))",true]},
+//   __O:function(object){return[object.center,"inside",object,true]},
+//   _P_:function(predicate){if(predicate=="indisde")return["",predicate,"",true]else},
+//   _PO:function(predicate,object){return["",predicate,"",true]},
+// }
+//
+// predicate "inside" = //boolean
+// predicate "inside" =function(object){return };
