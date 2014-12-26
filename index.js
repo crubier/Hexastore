@@ -13,7 +13,7 @@ function Hexastore() {
 // Export a database to import with import
 Hexastore.prototype.export = function(dbname) {
   fs.writeFileSync(dbname + ".json", JSON.stringify(this.spo));
-}
+};
 
 // Export a database to import with importZip
 Hexastore.prototype.exportZip = function(dbname) {
@@ -23,20 +23,17 @@ Hexastore.prototype.exportZip = function(dbname) {
   zip.addFile("data.json", new Buffer(JSON.stringify(this.spo)), "hexastore database");
   // or write everything to disk
   zip.writeZip(dbname + ".zip");
-}
+};
 
-// Todo
 // Export a database to a NT file
 Hexastore.prototype.exportNt = function(ntname) {
   var res = this.search([['s'],['p'],['o']]);
   var str = "";
   for(var i =0;i<res.length;i++) {
-    str = str + res[i]['s'] + ' ' + res[i]['p'] + ' ' + res[i]['o']+' .\n';
+    str = str + res[i].s + ' ' + res[i].p + ' ' + res[i].o+' .\n';
   }
   fs.writeFileSync(ntname + ".nt", str);
-}
-
-
+};
 
 // Import a database previously exported with export
 Hexastore.prototype.import = function(dbname) {
@@ -45,14 +42,14 @@ Hexastore.prototype.import = function(dbname) {
   } catch (err) {
     console.log(err);
   }
-}
+};
 
 // Import a database previously exported with exportZip
 Hexastore.prototype.importZip = function(dbname) {
   var zip = new AZip(dbname + ".zip");
   // outputs the content of some_folder/my_file.txt
   this.addSPO(JSON.parse(zip.readAsText("data.json")));
-}
+};
 
 // Import a database in a NT file
 Hexastore.prototype.importNt = function(ntname,callback) {
@@ -89,7 +86,7 @@ Hexastore.prototype.importNt = function(ntname,callback) {
 
   var input = fs.createReadStream(ntname+'.nt');
   readLines(input, func);
-}
+};
 
 // Add a single triple to the store
 Hexastore.prototype.put = function(element) {
@@ -133,13 +130,13 @@ Hexastore.prototype.put = function(element) {
   if (this.ops[o][p] === undefined)
     this.ops[o][p] = {};
   this.ops[o][p][s] = v;
-}
+};
 
 Hexastore.prototype.putAll = function(elements) {
   for (var i = 0; i < elements.length; i++) {
     this.put(elements[i]);
   }
-}
+};
 
 // Clear all database
 Hexastore.prototype.clear = function() {
@@ -149,7 +146,7 @@ Hexastore.prototype.clear = function() {
   this.pos = {};
   this.osp = {};
   this.ops = {};
-}
+};
 
 // Add triples to the store, with input data nested as subjects containing predicates containing objects containing values
 Hexastore.prototype.addSPO = function(element) {
@@ -164,16 +161,16 @@ Hexastore.prototype.addSPO = function(element) {
       }
     }
   }
-}
+};
 
 Hexastore.prototype.setSPO = function(element) {
   this.clear();
   this.addSPO(element);
-}
+};
 
 Hexastore.prototype.getSPO = function() {
   return this.spo;
-}
+};
 
 // Add triples to the store, with input data nested as subjects containing objects containing predicates containing values
 Hexastore.prototype.addSOP = function(element) {
@@ -188,16 +185,16 @@ Hexastore.prototype.addSOP = function(element) {
       }
     }
   }
-}
+};
 
 Hexastore.prototype.setSOP = function(element) {
   this.clear();
   this.addSOP(element);
-}
+};
 
 Hexastore.prototype.getSOP = function() {
   return this.sop;
-}
+};
 
 // Add triples to the store, with input data nested as predicate containing subjects containing objects containing values
 Hexastore.prototype.addPSO = function(element) {
@@ -212,16 +209,16 @@ Hexastore.prototype.addPSO = function(element) {
       }
     }
   }
-}
+};
 
 Hexastore.prototype.setPSO = function(element) {
   this.clear();
   this.addPSO(element);
-}
+};
 
 Hexastore.prototype.getPSO = function() {
   return this.pso;
-}
+};
 
 // Add triples to the store, with input data nested as predicates containing objects containing subjects containing values
 Hexastore.prototype.addPOS = function(element) {
@@ -236,16 +233,16 @@ Hexastore.prototype.addPOS = function(element) {
       }
     }
   }
-}
+};
 
 Hexastore.prototype.setPOS = function(element) {
   this.clear();
   this.addPOS(element);
-}
+};
 
 Hexastore.prototype.getPOS = function() {
   return this.pos;
-}
+};
 
 // Add triples to the store, with input data nested as objects containing subjects containing predicates containing values
 Hexastore.prototype.addOSP = function(element) {
@@ -260,16 +257,16 @@ Hexastore.prototype.addOSP = function(element) {
       }
     }
   }
-}
+};
 
 Hexastore.prototype.setOSP = function(element) {
   this.clear();
   this.addOSP(element);
-}
+};
 
 Hexastore.prototype.getOSP = function() {
   return this.osp;
-}
+};
 
 // Add triples to the store, with input data nested as objects containing predicates containing subjects containing values
 Hexastore.prototype.addOPS = function(element) {
@@ -284,16 +281,16 @@ Hexastore.prototype.addOPS = function(element) {
       }
     }
   }
-}
+};
 
 Hexastore.prototype.setOPS = function(element) {
   this.clear();
   this.addOPS(element);
-}
+};
 
 Hexastore.prototype.getOPS = function() {
   return this.ops;
-}
+};
 
 
 
@@ -301,7 +298,7 @@ Hexastore.prototype.getOPS = function() {
 
 
 
-// Query the store for facts with nothing specific (all facts)
+// Query the store for all facts with nothing specific (all facts)
 Hexastore.prototype.query___ = function(element) {
   var s = element[0];
   var p = element[1];
@@ -329,9 +326,9 @@ Hexastore.prototype.query___ = function(element) {
     }
   }
   return res;
-}
+};
 
-// Query the store for facts with specific subject
+// Query the store for all facts with specific subject
 Hexastore.prototype.queryS__ = function(element) {
   var s = element[0];
   var p = element[1];
@@ -357,9 +354,9 @@ Hexastore.prototype.queryS__ = function(element) {
     }
   }
   return res;
-}
+};
 
-// Query the store for facts with specific predicate
+// Query the store for all facts with specific predicate
 Hexastore.prototype.query_P_ = function(element) {
   var s = element[0];
   var p = element[1];
@@ -385,9 +382,9 @@ Hexastore.prototype.query_P_ = function(element) {
     }
   }
   return res;
-}
+};
 
-// Query the store for facts with specific object
+// Query the store for all facts with specific object
 Hexastore.prototype.query__O = function(element) {
   var s = element[0];
   var p = element[1];
@@ -413,9 +410,9 @@ Hexastore.prototype.query__O = function(element) {
     }
   }
   return res;
-}
+};
 
-// Query the store for facts with specific subject and predicate
+// Query the store for all facts with specific subject and predicate
 Hexastore.prototype.querySP_ = function(element) {
   var s = element[0];
   var p = element[1];
@@ -440,9 +437,9 @@ Hexastore.prototype.querySP_ = function(element) {
   }
 
   return res;
-}
+};
 
-// Query the store for facts with specific predicate and object
+// Query the store for all facts with specific predicate and object
 Hexastore.prototype.query_PO = function(element) {
   var s = element[0];
   var p = element[1];
@@ -467,9 +464,9 @@ Hexastore.prototype.query_PO = function(element) {
   }
 
   return res;
-}
+};
 
-// Query the store for facts with specific subject and object
+// Query the store for all facts with specific subject and object
 Hexastore.prototype.queryS_O = function(element) {
   var s = element[0];
   var p = element[1];
@@ -494,9 +491,9 @@ Hexastore.prototype.queryS_O = function(element) {
   }
 
   return res;
-}
+};
 
-// Query the store for facts with specific subject predicate and object (get values of this fact)
+// Query the store for all facts with specific subject predicate and object (get values of this fact)
 Hexastore.prototype.querySPO = function(element) {
   var s = element[0];
   var p = element[1];
@@ -518,13 +515,12 @@ Hexastore.prototype.querySPO = function(element) {
     }
   }
   return res;
-}
+};
 
 
 
 // Returns a set of triples matching a single query element
 Hexastore.prototype.queryDispatch = function(queryElement) {
-  // console.log("query dispatch : "+JSON.stringify(queryElement));
   if (queryElement[0] instanceof Array) {
     if (queryElement[1] instanceof Array) {
       if (queryElement[2] instanceof Array) {
@@ -554,7 +550,7 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
       }
     }
   }
-}
+};
 
 
 
@@ -647,9 +643,6 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
 
 // Take a query, and instantiate varibles in it, i.e. replacing variables instances with values from a result
 instantiateVariablesInQuery = function(result, theQuery) {
-  // console.log(" ");
-  // console.log(JSON.stringify(theQuery));
-
   var query = theQuery.slice().map(function(x) {
     return x.slice();
   });
@@ -657,16 +650,13 @@ instantiateVariablesInQuery = function(result, theQuery) {
     for (var j = 0; j < 3; j++) {
       if (query[i][j] instanceof Array) {
         if (result[query[i][j][0]] !== undefined) {
-          // console.log("instantiate "+query[i][j][0]+" with "+result[query[i][j][0]]);
           query[i][j] = result[query[i][j][0]];
         }
       }
     }
   }
-  // console.log(JSON.stringify(theQuery));
-  // console.log(" ");
   return query;
-}
+};
 
 // Takes a set of triples and an intermediate result, and returns a set of more complete results using informations in the triples
 instantiateVariablesInResult = function(result, query, triples) {
@@ -675,14 +665,12 @@ instantiateVariablesInResult = function(result, query, triples) {
     res[i] = clone(result);
     for (var j = 0; j < 3; j++) {
       if (query[j] instanceof Array) {
-        // console.log("instantiate "+query[j][0]+" in result "+i+" with "+triples[i][j]);
         res[i][query[j][0]] = triples[i][j];
       }
     }
   }
-  // console.log("instantiateVariablesInResult " + JSON.stringify(result) + " " + JSON.stringify(query) + " " + JSON.stringify(triples) + " " + JSON.stringify(res));
   return res;
-}
+};
 
 // Clone an object
 clone = function(obj) {
@@ -693,20 +681,14 @@ clone = function(obj) {
     }
   }
   return target;
-}
+};
 
-//Take a single result and a query and recursively return multiple results
+// Take a single result and a query and recursively return multiple results
 Hexastore.prototype.doSearch = function(result, theQuery) {
-  // console.log("(");
   var query = instantiateVariablesInQuery(result, theQuery);
-  // query.sort(entropyCompare(query));
-  // console.log("doSearch "+JSON.stringify(result)+" > "+JSON.stringify(query));
   var triples = this.queryDispatch(query[0]);
-  // console.log("raw triples "+JSON.stringify(triples));
   var results = instantiateVariablesInResult(result, query[0], triples);
-  // console.log("results "+JSON.stringify(results));
   query.shift();
-
   var res = [];
   if (query.length > 0) {
     for (var i = 0; i < results.length; i++) {
@@ -715,15 +697,14 @@ Hexastore.prototype.doSearch = function(result, theQuery) {
   } else {
     res = results;
   }
-  // console.log(")");
   return res;
-}
+};
 
 // Bootstrap a new search with an empty result
 Hexastore.prototype.search = function(query) {
   result = {};
   return this.doSearch(result, query);
-}
+};
 
 
 

@@ -1,42 +1,86 @@
-var Hexastore = require('../hexastore');
+
 var assert = require('assert');
 
+var Hexastore = require('./index.js');
 var db= new Hexastore();
 
-db.importNt("testdataset",
-function() {
-
-  assert.equal(1077,
-
-    db.search([
-  ["<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1>",["predicate"],["object"]],
-  [["similar"],["predicate"],["object"]]
-  ]).filter(function(match){return match.object2 !== match.object}).length);
-
-
-  assert.equal('<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1>',
-    db.search([
-    ["<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1>","<http://purl.org/dc/elements/1.1/publisher>",["publisher"]]
-    ])[0].publisher  );
-
+describe('Import',function(){
+  describe('nt',function(){
+    it('import nt data',function(done){
+      assert.doesNotThrow(function(){
+        db.importNt("smalltestdataset",done);
+      });
+    });
+  });
 });
 
-//
-//
-// [['person'],'born',['city']],
-// [['city'],'border',['border']],
-// [['border'],'inside','square(0,0,10,10)']
-//
-//
-//
-//
-// {
-//   P:"inside",
-//   ___:function(){return["(0,0)","inside","polygon((1,1),(1,-1),(-1,-1),(-1,1))",true]},
-//   __O:function(object){return[object.center,"inside",object,true]},
-//   _P_:function(predicate){if(predicate=="indisde")return["",predicate,"",true]else},
-//   _PO:function(predicate,object){return["",predicate,"",true]},
-// }
-//
-// predicate "inside" = //boolean
-// predicate "inside" =function(object){return };
+describe('Search',function(){
+  describe('search',function(){
+    it('multiple search with filter',function(){
+      assert.equal(72,
+        db
+          .search([
+            ["<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1>",["predicate"],["object"]],
+            [["similar"],["predicate"],["object"]]
+            ])
+          .filter(function(match){return match.object2 !== match.object;}).length);
+    });
+    it('precise search ',function(){
+      assert.equal('<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1>',
+      db.search([
+        ["<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1>","<http://purl.org/dc/elements/1.1/publisher>",["publisher"]]
+        ])[0].publisher  );
+
+    });
+  });
+});
+
+
+describe('Clear',function(){
+  describe('clear',function(){
+    it('clear store',function(){
+      assert.doesNotThrow(function(){
+        db.clear();
+      });
+    });
+    it('store empty after clear',function(){
+      assert.equal(0,db
+        .search([[['s'],['p'],['o']]]).length);
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+Geometry2D =
+{
+  ___:null,
+  __O:null,
+  _P_:null,
+  _PO:null,
+  S__:null,
+  S_O:null,
+  SP_:null,
+  SPO:function(element){
+    var s = element[0];
+    var p = element[1];
+    var o = element[2];
+    var res = [];
+    switch(p){
+      case "inside":
+        if( inside(geomParse(s),geomParse(o)) ) {
+          res = append(res,[s,p,o,true]);
+        }
+        break;
+    }
+    return res;
+  }
+};

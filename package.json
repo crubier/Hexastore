@@ -1,15 +1,21 @@
 {
   "name": "hexastore",
-  "version": "0.1.2",
-  "description": "A fast, pure javascript implementation of the hexatore RDF triple store, also useful as a graph database",
+  "version": "0.1.3",
+  "description": "A fast, pure javascript triple store implementation, also useful as a graph database",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/crubier/hexastore.git"
   },
+  "files": [
+    "index.js",
+    "package.json",
+    "readme.md",
+    "changelog.md"
+  ],
   "keywords": [
     "hexastore",
     "rdf",
@@ -29,5 +35,12 @@
   "homepage": "https://github.com/crubier/hexastore",
   "dependencies": {
     "adm-zip": "^0.4.4"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-coverage": "^0.3.32",
+    "gulp-mocha": "^2.0.0",
+    "mocha": "^2.1.0"
   }
 }
