@@ -692,7 +692,7 @@ Hexastore.prototype.doSearch = function(result, theQuery) {
   var res = [];
   if (query.length > 0) {
     for (var i = 0; i < results.length; i++) {
-      res = res.concat(this.doSearch(results[i], query))
+      res = res.concat(this.doSearch(results[i], query));
     }
   } else {
     res = results;

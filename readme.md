@@ -1,13 +1,13 @@
 Hexastore
 =========
 
-A pure javascript implementation of the hexatore RDF triple store, also useful as a graph database. Works in any browser with browserify or webpack. Early development, API is subject to changes.
+A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.
 
 Hexastore is based on [this research paper](http://karras.rutgers.edu/hexastore.pdf). It is a way to structure RDF data such that queries are really fast. However, as implemented here, it has a 6 fold increase in memory usage as compared to a naive implementation of a triple store.
 
 ## Installation
 
-Its pure JS, so nothing fancy, just:
+It is pure JS, so nothing fancy, just:
 
     npm install hexastore
 
@@ -15,12 +15,9 @@ Its pure JS, so nothing fancy, just:
 
 ### Create a database
 
-Just require Hexastore
+Just require Hexastore, and then you can start creating stores everywhere !
 
     var Hexastore = require('Hexastore');
-
-And then you can start creating stores everywhere !
-
     var mydb = new Hexastore();
 
 ### Add triples
@@ -66,13 +63,15 @@ Databases are imported and exported as Subjects containing Predicates containing
 
     db.import("Mydatabase");    // Import "Mydatabase.json"
     db.importZip("Mydatabase"); // Import "Mydatabase.zip"
+    db.importNt("Mydatabase");  // Import "Mydatabase.nt"
 
     db.export("Mydatabase");    // Export "Mydatabase.json"
     db.exportZip("Mydatabase"); // Export "Mydatabase.zip"
+    db.exportNt("Mydatabase");  // Export "Mydatabase.nt"
 
 ### Search
 
-Search is sooo simple. Just query a set of triples, adding `[]` around variable names
+Searching is **very** simple. Just query a set of triples, adding `[]` around variable names
 
 
     var result = db.search([
@@ -91,5 +90,7 @@ A bit more complex
 Queries are really fast, so don't hesitate to do complex queries.
 
 ## Tests
+
+    gulp test
 
 ## Contributing
