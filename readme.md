@@ -1,4 +1,6 @@
-Hexastore
+Hexastore [![Travis](https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/dm/Hexastore.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/v/Hexastore.svg?style=flat-square)]()
+[![node](https://img.shields.io/node/v/Hexastore.svg?style=flat-square)]()
+[![Gemnasium](https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square)]()
 =========
 
 A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.
