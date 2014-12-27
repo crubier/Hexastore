@@ -49,6 +49,7 @@ describe('Clear',function(){
   });
 });
 
+
 Geometry2D =
 {
   ___:null,
