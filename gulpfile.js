@@ -2,6 +2,7 @@ var gulp  = require('gulp');
 var mocha = require('gulp-mocha');
 var cover = require('gulp-coverage');
 var del   = require('del');
+var coveralls = require('gulp-coveralls');
 
 
 var watching = false;
@@ -30,6 +31,10 @@ gulp.task('clean', function (cb) {
   del(".coverdata", cb);
 });
 
+gulp.task('watch', function() {
+  return gulp.src('lcov.info')
+    .pipe(coveralls());
+});
 
 gulp.task('watch', function() {
   gulp.watch('**/*.js', ['test']);

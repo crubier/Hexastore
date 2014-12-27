@@ -1,4 +1,6 @@
-# Hexastore [![Travis](https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/dm/hexastore.svg?style=flat-square)]() [![npm](https://img.shields.io/npm/v/hexastore.svg?style=flat-square)]() [![node](https://img.shields.io/node/v/hexastore.svg?style=flat-square)]() [![Gemnasium](https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square)]()
+# Hexastore
+
+[![Travis](https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square)](https://travis-ci.org/crubier/Hexastore) [![npm](https://img.shields.io/npm/dm/hexastore.svg?style=flat-square)](https://www.npmjs.com/package/hexastore) [![npm](https://img.shields.io/npm/v/hexastore.svg?style=flat-square)](https://www.npmjs.com/package/hexastore) [![node](https://img.shields.io/node/v/hexastore.svg?style=flat-square)](https://www.npmjs.com/package/hexastore) [![Gemnasium](https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square)](https://gemnasium.com/crubier/Hexastore)
 
 A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.
 
