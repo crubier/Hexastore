@@ -553,6 +553,8 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
 };
 
 
+//TODO : Add named js objects, star like
+
 
 // // Query planner
 // restrictivity = function(queryTriple) {

@@ -31,13 +31,13 @@ gulp.task('clean', function (cb) {
   del(".coverdata", cb);
 });
 
-gulp.task('coverage',['test'], function() {
+gulp.task('coveralls',['test'], function() {
   return gulp.src('coverage/lcov.info')
     .pipe(coveralls());
 });
 
 gulp.task('watch', function() {
-  gulp.watch('**/*.js', ['coverage']);
+  gulp.watch('**/*.js', ['test']);
 });
 
-gulp.task('default', ['coverage']);
+gulp.task('default', ['coveralls']);
