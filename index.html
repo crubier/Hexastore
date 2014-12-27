@@ -1,156 +1,137 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Hexastore by crubier</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="responsive-nav.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#hello">Hello</a><ul>
+<li><a href="#some-math">Some math</a></li>
+<li><a href="#and-tables">And tables</a></li>
+<li><a href="#here-is-some-code">Here is some code</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#formatted-code">Formatted code</a></li>
+</ul></li>
+</ul>
+</div>
+<div class="figure">
+<img src="HexastoreLogo.svg" title="logo" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Hexastore</h1>
-        <p>A fast, pure javascript triple store implementation, also useful as a graph database.</p>
-
-        <p class="view"><a href="https://github.com/crubier/Hexastore">View the Project on GitHub <small>crubier/Hexastore</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/crubier/Hexastore/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/crubier/Hexastore/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/crubier/Hexastore">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="hexastore" class="anchor" href="#hexastore" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hexastore</h1>
-
-<p><a href="https://travis-ci.org/crubier/Hexastore"><img src="https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square" alt="Travis"></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/dm/hexastore.svg?style=flat-square" alt="npm"></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/v/hexastore.svg?style=flat-square" alt="npm"></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/node/v/hexastore.svg?style=flat-square" alt="node"></a> <a href="https://gemnasium.com/crubier/Hexastore"><img src="https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square" alt="Gemnasium"></a> <a href="https://coveralls.io/r/crubier/Hexastore"><img src="https://img.shields.io/coveralls/crubier/Hexastore.svg?style=flat-square" alt="Coverage Status"></a></p>
-
-<p>A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.</p>
-
-<p>Hexastore is based on <a href="http://karras.rutgers.edu/hexastore.pdf">this research paper</a>. It is a way to structure RDF data such that queries are really fast. However, as implemented here, it has a 6 fold increase in memory usage as compared to a naive implementation of a triple store.</p>
-
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
-
-<p>It is pure JS, so nothing fancy, just:</p>
-
-<pre><code>npm install hexastore
-</code></pre>
-
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<h3>
-<a id="create-a-database" class="anchor" href="#create-a-database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a database</h3>
-
-<p>Just require Hexastore, and then you can start creating stores everywhere !</p>
-
-<pre><code>var Hexastore = require('Hexastore');
-var mydb = new Hexastore();
-</code></pre>
-
-<h3>
-<a id="add-triples" class="anchor" href="#add-triples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add triples</h3>
-
-<p>To add a single triple</p>
-
-<pre><code>mydb.put(["hexastore","is","awesome"]);
-</code></pre>
-
-<p>To add a collection of triples</p>
-
-<pre><code>mydb.putAll([
-    ["hexastore","is","nice"],
-    ["hexastore","speed","fast"],
-    ["javascript","is","nice"]
-  ]);
-</code></pre>
-
-<p>To add triples represented as nested JS objects</p>
-
-<pre><code>mydb.addSPO({
-    hexastore:{is:{awesome:true,nice:true},speed:{fast:true}},
-    javascript:{is:{nice:true}}
+</div>
+<h1 id="hello">Hello</h1>
+<h2 id="some-math">Some math</h2>
+<p>Lolilole</p>
+<p><span class="math">\[ 5 + 5 = 6 \]</span></p>
+<p>Okiiii</p>
+<p><span class="math">\[\langle a,b,c\rangle \in \mathbb{N}^3 \]</span></p>
+<p>loliloe</p>
+<p><span class="math">\[ A_\infty + \pi A_0\]</span></p>
+<h2 id="and-tables">And tables</h2>
+<p>Okau</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr class="even">
+<td align="left">col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr class="odd">
+<td align="left">zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="here-is-some-code">Here is some code</h2>
+<p>Wow :</p>
+<pre><code>such.code(&quot;lolilo&quot;);</code></pre>
+<p>Ok !</p>
+<h2 id="lists">Lists</h2>
+<p>Here is a nice list</p>
+<ul>
+<li>Hello</li>
+<li>Wow
+<ul>
+<li>lol
+<ul>
+<li>wowioeoe</li>
+<li>bouhou</li>
+</ul></li>
+<li>aha</li>
+</ul></li>
+<li>Ok
+<ul>
+<li>nested !</li>
+<li>olala !</li>
+</ul></li>
+<li>Lol</li>
+</ul>
+<h2 id="formatted-code">Formatted code</h2>
+<pre class="sourceCode haskell"><code class="sourceCode haskell">qsort []     <span class="fu">=</span> []
+qsort (x<span class="fu">:</span>xs) <span class="fu">=</span> qsort (filter (<span class="fu">&lt;</span> x) xs) <span class="fu">++</span> [x] <span class="fu">++</span>
+qsort (filter (<span class="fu">&gt;=</span> x) xs)</code></pre>
+<p>Something else</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">putAll</span>([
+  [<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>],
+  [<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;speed&quot;</span>,<span class="st">&quot;fast&quot;</span>],
+  [<span class="st">&quot;javascript&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>]
+  ]);</code></pre>
+<script>
+  var nav = responsiveNav("#TOC",{ // Selector
+    animate: true, // Boolean: Use CSS3 transitions, true or false
+    transition: 200, // Integer: Speed of the transition, in milliseconds
+    label: "Menu", // String: Label for the navigation toggle
+    insert: "before", // String: Insert the toggle before or after the navigation
+    customToggle: "", // Selector: Specify the ID of a custom toggle
+    closeOnNavClick: false, // Boolean: Close the navigation when one of the links are clicked
+    openPos: "relative", // String: Position of the opened nav, relative or static
+    navClass: "TOC", // String: Default CSS class. If changed, you need to edit the CSS too!
+    navActiveClass: "js-nav-active", // String: Class that is added to  element when nav is active
+    jsClass: "js", // String: 'JS enabled' class which is added to  element
+    init: function(){}, // Function: Init callback
+    open: function(){}, // Function: Open callback
+    close: function(){} // Function: Close callback
   });
-</code></pre>
-
-<p>Or</p>
-
-<pre><code>mydb.addSOP({
-    hexastore:{awesome:{is:true},nice:{is:true},fast:{speed:true}},
-    javascript:{nice:{is:true}}
-  };)
-</code></pre>
-
-<p>You get it ? So basically you can use any of the 6 orderings of the hexastore :</p>
-
-<pre><code>mydb.addSPO(...);
-mydb.addSOP(...);
-mydb.addOSP(...);
-mydb.addOPS(...);
-mydb.addPSO(...);
-mydb.addPOS(...);
-</code></pre>
-
-<h3>
-<a id="import-and-export" class="anchor" href="#import-and-export" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import and export</h3>
-
-<p>Databases are imported and exported as Subjects containing Predicates containing Objects containing Values (SPO ordering). Import and export can work on normal JSON files, or on Zipped "data.json" files.</p>
-
-<pre><code>db.import("Mydatabase");    // Import "Mydatabase.json"
-db.importZip("Mydatabase"); // Import "Mydatabase.zip"
-db.importNt("Mydatabase");  // Import "Mydatabase.nt"
-
-db.export("Mydatabase");    // Export "Mydatabase.json"
-db.exportZip("Mydatabase"); // Export "Mydatabase.zip"
-db.exportNt("Mydatabase");  // Export "Mydatabase.nt"
-</code></pre>
-
-<h3>
-<a id="search" class="anchor" href="#search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search</h3>
-
-<p>Searching is <strong>very</strong> simple. Just query a set of triples, adding <code>[]</code> around variable names</p>
-
-<pre><code>var result = db.search([
-    [["what"],"is","nice"]
-  ]);
-// result == [{what:hexastore},{what:javascript}]
-</code></pre>
-
-<p>A bit more complex</p>
-
-<pre><code>var result = db.search([
-    [["what"],"is","nice"]
-    [["what"],"speed",["howfast"]]
-  ]);
-// result == [{what:"hexastore",howfast:"fast"}]
-</code></pre>
-
-<p>Queries are really fast, so don't hesitate to do complex queries.</p>
-
-<h2>
-<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
-
-<pre><code>gulp test
-</code></pre>
-
-<h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/crubier">crubier</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</script>
+</body>
 </html>
