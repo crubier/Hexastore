@@ -5,7 +5,7 @@ var Hexastore = require('./index.js');
 var db= new Hexastore();
 
 describe('Import',function(){
-  describe('nt',function(){
+  describe('nt data',function(){
     it('import nt data',function(done){
       assert.doesNotThrow(function(){
         db.importNt("smalltestdataset",done);
@@ -35,7 +35,6 @@ describe('Search',function(){
   });
 });
 
-
 describe('Clear',function(){
   describe('clear',function(){
     it('clear store',function(){
@@ -49,16 +48,6 @@ describe('Clear',function(){
     });
   });
 });
-
-
-
-
-
-
-
-
-
-
 
 Geometry2D =
 {
