@@ -6,6 +6,25 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
   <link rel="stylesheet" href="assets/style.css" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -45,88 +64,88 @@
 </div>
 <p>A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.</p>
 <p>Hexastore is based on <a href="http://karras.rutgers.edu/hexastore.pdf">this research paper</a>. It is a way to structure RDF data such that queries are really fast. However, as implemented here, it has a 6 fold increase in memory usage as compared to a naive implementation of a triple store.</p>
-<p><a href="https://travis-ci.org/crubier/Hexastore"><img src="https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square" alt="Travis" /></a> <a href="https://coveralls.io/r/crubier/Hexastore"><img src="https://img.shields.io/coveralls/crubier/Hexastore.svg?style=flat-square" alt="Coverage Status" /></a> <a href="https://gemnasium.com/crubier/Hexastore"><img src="https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square" alt="Gemnasium" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/dm/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/v/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/node/v/hexastore.svg?style=flat-square" alt="node" /></a> <a href="https://github.com/crubier/Hexastore"><img src="https://img.shields.io/github/tag/strongloop/express.svg?style=flat-square" alt="GitHub tag" /></a></p>
+<p><a href="https://travis-ci.org/crubier/Hexastore"><img src="https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square" alt="Travis" /></a> <a href="https://coveralls.io/r/crubier/Hexastore"><img src="https://img.shields.io/coveralls/crubier/Hexastore.svg?style=flat-square" alt="Coverage Status" /></a> <a href="https://gemnasium.com/crubier/Hexastore"><img src="https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square" alt="Gemnasium" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/dm/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/v/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/node/v/hexastore.svg?style=flat-square" alt="node" /></a> <a href="https://github.com/crubier/Hexastore"><img src="https://img.shields.io/github/release/crubier/Hexastore.svg?style=flat-square" alt="GitHub tag" /></a></p>
 <h1 id="installation">Installation</h1>
 <p>It is pure JS, so nothing fancy, just:</p>
-<pre><code>npm install hexastore</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">npm</span> install hexastore</code></pre>
 <h1 id="usage">Usage</h1>
 <h2 id="create-a-database">Create a database</h2>
 <p>Just require Hexastore, and then you can start creating stores everywhere !</p>
-<pre><code>var Hexastore = require(&#39;Hexastore&#39;);
-var mydb = new Hexastore();</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> Hexastore = <span class="fu">require</span>(<span class="st">&#39;Hexastore&#39;</span>);
+<span class="kw">var</span> mydb = <span class="kw">new</span> <span class="fu">Hexastore</span>();</code></pre>
 <h2 id="add-triples">Add triples</h2>
 <h3 id="add-a-single-triple">Add a single triple</h3>
-<pre><code>mydb.put([&quot;hexastore&quot;,&quot;is&quot;,&quot;awesome&quot;]);</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">put</span>([<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;awesome&quot;</span>]);</code></pre>
 <h3 id="add-a-collection-of-triples">Add a collection of triples</h3>
-<pre><code>mydb.putAll([
-    [&quot;hexastore&quot;,&quot;is&quot;,&quot;nice&quot;],
-    [&quot;hexastore&quot;,&quot;speed&quot;,&quot;fast&quot;],
-    [&quot;javascript&quot;,&quot;is&quot;,&quot;nice&quot;]
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">putAll</span>([
+    [<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>],
+    [<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;speed&quot;</span>,<span class="st">&quot;fast&quot;</span>],
+    [<span class="st">&quot;javascript&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>]
   ]);</code></pre>
 <h3 id="add-triples-represented-as-nested-js-objects">Add triples represented as nested JS objects</h3>
-<pre><code>mydb.addSPO({
-    hexastore:{is:{awesome:true,nice:true},speed:{fast:true}},
-    javascript:{is:{nice:true}}
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">addSPO</span>({
+    <span class="dt">hexastore</span>:{<span class="dt">is</span>:{<span class="dt">awesome</span>:<span class="kw">true</span>,<span class="dt">nice</span>:<span class="kw">true</span>},<span class="dt">speed</span>:{<span class="dt">fast</span>:<span class="kw">true</span>}},
+    <span class="dt">javascript</span>:{<span class="dt">is</span>:{<span class="dt">nice</span>:<span class="kw">true</span>}}
   });</code></pre>
 <p>Or</p>
-<pre><code>mydb.addSOP({
-    hexastore:{awesome:{is:true},nice:{is:true},fast:{speed:true}},
-    javascript:{nice:{is:true}}
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">addSOP</span>({
+    <span class="dt">hexastore</span>:{<span class="dt">awesome</span>:{<span class="dt">is</span>:<span class="kw">true</span>},<span class="dt">nice</span>:{<span class="dt">is</span>:<span class="kw">true</span>},<span class="dt">fast</span>:{<span class="dt">speed</span>:<span class="kw">true</span>}},
+    <span class="dt">javascript</span>:{<span class="dt">nice</span>:{<span class="dt">is</span>:<span class="kw">true</span>}}
   };)</code></pre>
 <p>You get it ? So basically you can use any of the 6 orderings of the hexastore :</p>
-<pre><code>mydb.addSPO(...);
-mydb.addSOP(...);
-mydb.addOSP(...);
-mydb.addOPS(...);
-mydb.addPSO(...);
-mydb.addPOS(...);</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">addSPO</span>(...);
+<span class="ot">mydb</span>.<span class="fu">addSOP</span>(...);
+<span class="ot">mydb</span>.<span class="fu">addOSP</span>(...);
+<span class="ot">mydb</span>.<span class="fu">addOPS</span>(...);
+<span class="ot">mydb</span>.<span class="fu">addPSO</span>(...);
+<span class="ot">mydb</span>.<span class="fu">addPOS</span>(...);</code></pre>
 <h3 id="add-named-js-objects">Add named JS Objects</h3>
 <p>Finally, you can add arbitrary JS object this way, it acts a bit like Object Relational Mapping:</p>
-<pre><code>mydb.addObject(&quot;bob&quot;,{address:{number:10,street:&quot;Avenue des Champs Elysees&quot;,city:&quot;Paris&quot;,country:&quot;France&quot;},friend:[&quot;toto&quot;,&quot;titi&quot;,&quot;tata&quot;]})</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">addObject</span>(<span class="st">&quot;bob&quot;</span>,{<span class="dt">address</span>:{<span class="dt">number</span>:<span class="dv">10</span>,<span class="dt">street</span>:<span class="st">&#39;Avenue des Champs Elysees&#39;</span>,<span class="dt">city</span>:<span class="st">&#39;Paris&#39;</span>,<span class="dt">country</span>:<span class="st">&#39;France&#39;</span>},<span class="dt">friend</span>:[<span class="st">&quot;toto&quot;</span>,<span class="st">&quot;titi&quot;</span>,<span class="st">&quot;tata&quot;</span>]})</code></pre>
 <p>Which is equivalent to:</p>
-<pre><code>mydb.putAll([
-    [&quot;bob&quot;,&quot;address&quot;,&quot;bob/address&quot;],
-    [&quot;bob/address&quot;,&quot;number&quot;,&quot;10&quot;],
-    [&quot;bob/address&quot;,&quot;street&quot;,&quot;Avenue des Champs Elysees&quot;],
-    [&quot;bob/address&quot;,&quot;city&quot;,&quot;Paris&quot;],
-    [&quot;bob&quot;,&quot;friend&quot;,&quot;bob/friend&quot;],
-    [&quot;bob/friend&quot;,&quot;0&quot;,&quot;toto&quot;],
-    [&quot;bob/friend&quot;,&quot;1&quot;,&quot;titi&quot;],
-    [&quot;bob/friend&quot;,&quot;2&quot;,&quot;tata&quot;]
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">putAll</span>([
+    [<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;address&quot;</span>,<span class="st">&quot;{address:{number:10,street:&#39;Avenue des Champs Elysees&#39;,city:&#39;Paris&#39;,country:&#39;France&#39;}&quot;</span>],
+    [<span class="st">&quot;{address:{number:10,street:&#39;Avenue des Champs Elysees&#39;,city:&#39;Paris&#39;,country:&#39;France&#39;}&quot;</span>,<span class="st">&quot;number&quot;</span>,<span class="st">&quot;10&quot;</span>],
+    [<span class="st">&quot;{address:{number:10,street:&#39;Avenue des Champs Elysees&#39;,city:&#39;Paris&#39;,country:&#39;France&#39;}&quot;</span>,<span class="st">&quot;street&quot;</span>,<span class="st">&quot;Avenue des Champs Elysees&quot;</span>],
+    [<span class="st">&quot;{address:{number:10,street:&#39;Avenue des Champs Elysees&#39;,city:&#39;Paris&#39;,country:&#39;France&#39;}&quot;</span>,<span class="st">&quot;city&quot;</span>,<span class="st">&quot;Paris&quot;</span>],
+    [<span class="st">&quot;bob&quot;</span>,<span class="st">&quot;friend&quot;</span>,<span class="st">&quot;[&quot;</span>toto<span class="st">&quot;,&quot;</span>titi<span class="st">&quot;,&quot;</span>tata<span class="st">&quot;]&quot;</span>],
+    [<span class="st">&quot;[&quot;</span>toto<span class="st">&quot;,&quot;</span>titi<span class="st">&quot;,&quot;</span>tata<span class="st">&quot;]&quot;</span>,<span class="st">&quot;0&quot;</span>,<span class="st">&quot;toto&quot;</span>],
+    [<span class="st">&quot;[&quot;</span>toto<span class="st">&quot;,&quot;</span>titi<span class="st">&quot;,&quot;</span>tata<span class="st">&quot;]&quot;</span>,<span class="st">&quot;1&quot;</span>,<span class="st">&quot;titi&quot;</span>],
+    [<span class="st">&quot;[&quot;</span>toto<span class="st">&quot;,&quot;</span>titi<span class="st">&quot;,&quot;</span>tata<span class="st">&quot;]&quot;</span>,<span class="st">&quot;2&quot;</span>,<span class="st">&quot;tata&quot;</span>]
   ]);</code></pre>
 <h2 id="import-and-export">Import and export</h2>
 <p>Databases are imported and exported as Subjects containing Predicates containing Objects containing Values (SPO ordering). Import and export can work on normal JSON files, or on Zipped &quot;data.json&quot; files.</p>
-<pre><code>db.import(&quot;Mydatabase&quot;);    // Import &quot;Mydatabase.json&quot;
-db.importZip(&quot;Mydatabase&quot;); // Import &quot;Mydatabase.zip&quot;
-db.importNt(&quot;Mydatabase&quot;);  // Import &quot;Mydatabase.nt&quot;
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">db</span>.<span class="fu">import</span>(<span class="st">&quot;Mydatabase&quot;</span>);    <span class="co">// Import &quot;Mydatabase.json&quot;</span>
+<span class="ot">db</span>.<span class="fu">importZip</span>(<span class="st">&quot;Mydatabase&quot;</span>); <span class="co">// Import &quot;Mydatabase.zip&quot;</span>
+<span class="ot">db</span>.<span class="fu">importNt</span>(<span class="st">&quot;Mydatabase&quot;</span>);  <span class="co">// Import &quot;Mydatabase.nt&quot;</span>
 
-db.export(&quot;Mydatabase&quot;);    // Export &quot;Mydatabase.json&quot;
-db.exportZip(&quot;Mydatabase&quot;); // Export &quot;Mydatabase.zip&quot;
-db.exportNt(&quot;Mydatabase&quot;);  // Export &quot;Mydatabase.nt&quot;</code></pre>
+<span class="ot">db</span>.<span class="fu">export</span>(<span class="st">&quot;Mydatabase&quot;</span>);    <span class="co">// Export &quot;Mydatabase.json&quot;</span>
+<span class="ot">db</span>.<span class="fu">exportZip</span>(<span class="st">&quot;Mydatabase&quot;</span>); <span class="co">// Export &quot;Mydatabase.zip&quot;</span>
+<span class="ot">db</span>.<span class="fu">exportNt</span>(<span class="st">&quot;Mydatabase&quot;</span>);  <span class="co">// Export &quot;Mydatabase.nt&quot;</span></code></pre>
 <h2 id="search">Search</h2>
 <h3 id="simple-search">Simple search</h3>
 <p>Searching is <strong>very</strong> simple. Just query a set of triples, adding <code>[]</code> around variable names. This acts a bit like SQL <code>JOIN</code> statements.</p>
-<pre><code>var result = db.search([
-    [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> result = <span class="ot">db</span>.<span class="fu">search</span>([
+    [[<span class="st">&quot;what&quot;</span>],<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>]
   ]);
-// result == [{what:hexastore},{what:javascript}]</code></pre>
+<span class="co">// result == [{what:hexastore},{what:javascript}]</span></code></pre>
 <p>A bit more complex</p>
-<pre><code>var result = db.search([
-    [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
-    [[&quot;what&quot;],&quot;speed&quot;,[&quot;howfast&quot;]]
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> result = <span class="ot">db</span>.<span class="fu">search</span>([
+    [[<span class="st">&quot;what&quot;</span>],<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>]
+    [[<span class="st">&quot;what&quot;</span>],<span class="st">&quot;speed&quot;</span>,[<span class="st">&quot;howfast&quot;</span>]]
   ]);
-// result == [{what:&quot;hexastore&quot;,howfast:&quot;fast&quot;}]</code></pre>
+<span class="co">// result == [{what:&quot;hexastore&quot;,howfast:&quot;fast&quot;}]</span></code></pre>
 <p>Queries are really fast, so don't hesitate to do complex queries.</p>
 <h3 id="using-filters">Using filters</h3>
 <p>You can use filters to filter results, a bit like in SQL <code>WHERE</code> statements</p>
-<pre><code>var result = db.search([
-      [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
-    ]).filter(function(match){
-      return match.what.length &lt;10;
-    })
-// result == [what:&quot;hexastore&quot;]</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> result = <span class="ot">db</span>.<span class="fu">search</span>([
+    [[<span class="st">&quot;what&quot;</span>],<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>]
+  ]).<span class="fu">filter</span>(<span class="kw">function</span>(match){
+    <span class="kw">return</span> <span class="ot">match</span>.<span class="ot">what</span>.<span class="fu">length</span> &lt;<span class="dv">10</span>;
+  })
+<span class="co">// result == [what:&quot;hexastore&quot;]</span></code></pre>
 <h1 id="tests">Tests</h1>
-<pre><code>gulp test</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">gulp</span> test</code></pre>
 <h1 id="contributing">Contributing</h1>
 <script>
 
