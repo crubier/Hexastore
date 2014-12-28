@@ -6,27 +6,8 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
-  </style>
   <link rel="stylesheet" href="assets/style.css" type="text/css" />
-  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div id="BUTTONS">
@@ -39,35 +20,23 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </div>
 <div id="TOC">
 <ul>
-<li><a href="#hello">Hello</a><ul>
-<li><a href="#tests">Tests</a><ul>
-<li><a href="#some-math">Some math</a></li>
-<li><a href="#and-tables">And tables</a></li>
-<li><a href="#here-is-some-code">Here is some code</a></li>
-<li><a href="#lists">Lists</a></li>
-<li><a href="#formatted-code">Formatted code</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#super">Super</a><ul>
-<li><a href="#a-lot-of-text-right-here">A lot of text right here</a><ul>
-<li><a href="#le-passage-de-lorem-ipsum-standard-utilisé-depuis-1500">Le passage de Lorem Ipsum standard, utilisé depuis 1500</a></li>
-<li><a href="#section-1.10.32-du-de-finibus-bonorum-et-malorum-de-ciceron-45-av.-j.-c.">Section 1.10.32 du &quot;De Finibus Bonorum et Malorum&quot; de Ciceron (45 av. J.-C.)</a></li>
-<li><a href="#traduction-de-h.-rackham-1914">Traduction de H. Rackham (1914)</a></li>
-<li><a href="#section-1.10.33-du-de-finibus-bonorum-et-malorum-de-ciceron-45-av.-j.-c.">Section 1.10.33 du &quot;De Finibus Bonorum et Malorum&quot; de Ciceron (45 av. J.-C.)</a></li>
-</ul></li>
-<li><a href="#math-again">Math again</a></li>
-</ul></li>
-<li><a href="#hexastore">Hexastore</a><ul>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#usage">Usage</a><ul>
 <li><a href="#create-a-database">Create a database</a></li>
-<li><a href="#add-triples">Add triples</a></li>
+<li><a href="#add-triples">Add triples</a><ul>
+<li><a href="#add-a-single-triple">Add a single triple</a></li>
+<li><a href="#add-a-collection-of-triples">Add a collection of triples</a></li>
+<li><a href="#add-triples-represented-as-nested-js-objects">Add triples represented as nested JS objects</a></li>
+<li><a href="#add-named-js-objects">Add named JS Objects</a></li>
+</ul></li>
 <li><a href="#import-and-export">Import and export</a></li>
-<li><a href="#search">Search</a></li>
+<li><a href="#search">Search</a><ul>
+<li><a href="#simple-search">Simple search</a></li>
+<li><a href="#using-filters">Using filters</a></li>
 </ul></li>
-<li><a href="#tests-1">Tests</a></li>
+</ul></li>
+<li><a href="#tests">Tests</a></li>
 <li><a href="#contributing">Contributing</a></li>
-</ul></li>
 </ul>
 </div>
 <div class="figure">
@@ -76,141 +45,25 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </div>
 <p>A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.</p>
 <p>Hexastore is based on <a href="http://karras.rutgers.edu/hexastore.pdf">this research paper</a>. It is a way to structure RDF data such that queries are really fast. However, as implemented here, it has a 6 fold increase in memory usage as compared to a naive implementation of a triple store.</p>
-<p><a href="https://travis-ci.org/crubier/Hexastore"><img src="https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square" alt="Travis" /></a> <a href="https://coveralls.io/r/crubier/Hexastore"><img src="https://img.shields.io/coveralls/crubier/Hexastore.svg?style=flat-square" alt="Coverage Status" /></a> <a href="https://gemnasium.com/crubier/Hexastore"><img src="https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square" alt="Gemnasium" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/dm/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/v/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/node/v/hexastore.svg?style=flat-square" alt="node" /></a></p>
-<h1 id="hello">Hello</h1>
-<h2 id="tests">Tests</h2>
-<h3 id="some-math">Some math</h3>
-<p>Lolilole</p>
-<p><span class="math">\[ 5 + 5 = 6 \]</span></p>
-<p>Okiiii</p>
-<p><span class="math">\[\langle a,b,c\rangle \in \mathbb{N}^3 \]</span></p>
-<p>loliloe</p>
-<p><span class="math">\[ A_\infty + \pi A_0\]</span></p>
-<h3 id="and-tables">And tables</h3>
-<p>Okau</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Tables</th>
-<th align="center">Are</th>
-<th align="right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">col 3 is</td>
-<td align="center">right-aligned</td>
-<td align="right">$1600</td>
-</tr>
-<tr class="even">
-<td align="left">col 2 is</td>
-<td align="center">centered</td>
-<td align="right">$12</td>
-</tr>
-<tr class="odd">
-<td align="left">zebra stripes</td>
-<td align="center">are neat</td>
-<td align="right">$1</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="here-is-some-code">Here is some code</h3>
-<p>Wow :</p>
-<pre><code>such.code(&quot;lolilo&quot;);</code></pre>
-<p>Ok !</p>
-<h3 id="lists">Lists</h3>
-<p>Here is a nice list</p>
-<ul>
-<li>Hello</li>
-<li>Wow
-<ul>
-<li>lol
-<ul>
-<li>wowioeoe</li>
-<li>bouhou</li>
-</ul></li>
-<li>aha</li>
-</ul></li>
-<li>Ok
-<ul>
-<li>nested !</li>
-<li>olala !</li>
-</ul></li>
-<li>Lol</li>
-</ul>
-<h3 id="formatted-code">Formatted code</h3>
-<pre class="sourceCode haskell"><code class="sourceCode haskell">qsort []     <span class="fu">=</span> []
-qsort (x<span class="fu">:</span>xs) <span class="fu">=</span> qsort (filter (<span class="fu">&lt;</span> x) xs) <span class="fu">++</span> [x] <span class="fu">++</span>
-qsort (filter (<span class="fu">&gt;=</span> x) xs)</code></pre>
-<p>Something else</p>
-<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">mydb</span>.<span class="fu">putAll</span>([
-  [<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>],
-  [<span class="st">&quot;hexastore&quot;</span>,<span class="st">&quot;speed&quot;</span>,<span class="st">&quot;fast&quot;</span>],
-  [<span class="st">&quot;javascript&quot;</span>,<span class="st">&quot;is&quot;</span>,<span class="st">&quot;nice&quot;</span>]
-  ]);</code></pre>
-<h1 id="super">Super</h1>
-<h2 id="a-lot-of-text-right-here">A lot of text right here</h2>
-<h3 id="le-passage-de-lorem-ipsum-standard-utilisé-depuis-1500">Le passage de Lorem Ipsum standard, utilisé depuis 1500</h3>
-<p>&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;</p>
-<h3 id="section-1.10.32-du-de-finibus-bonorum-et-malorum-de-ciceron-45-av.-j.-c.">Section 1.10.32 du &quot;De Finibus Bonorum et Malorum&quot; de Ciceron (45 av. J.-C.)</h3>
-<p>&quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;</p>
-<h3 id="traduction-de-h.-rackham-1914">Traduction de H. Rackham (1914)</h3>
-<p>&quot;But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?&quot;</p>
-<h3 id="section-1.10.33-du-de-finibus-bonorum-et-malorum-de-ciceron-45-av.-j.-c.">Section 1.10.33 du &quot;De Finibus Bonorum et Malorum&quot; de Ciceron (45 av. J.-C.)</h3>
-<p>&quot;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&quot;</p>
-<h2 id="math-again">Math again</h2>
-<p><span class="math">\[ x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}} \]</span></p>
-<p><span class="math">\[\lim_{x\to 0}{\frac{e^x-1}{2x}}\overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}\lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}\]</span></p>
-<p><span class="math">\[
-\begin{gather*}
-a_0=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\,\mathrm{d}x\\[6pt]
-\begin{split}
-a_n=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\cos nx\,\mathrm{d}x=\\
-=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}x^2\cos nx\,\mathrm{d}x
-\end{split}\\[6pt]
-\begin{split}
-b_n=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\sin nx\,\mathrm{d}x=\\
-=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}x^2\sin nx\,\mathrm{d}x
-\end{split}\\[6pt]
-\end{gather*}
-\]</span></p>
-<p><span class="math">\[
-\begin{align*}
-&amp;\int_0^1 \int_0^{2(1-z)} \int_0^{3(1- x/2 - z)} dy \, dx \, dz\\
-&amp;\qquad =
-\int_0^1 \int_0^{2(1-z)} 3\left(1 - \frac{x}{2} -  z \right) dx \,
-dz\\
-&amp;\qquad = \int_0^1 3\left.\left[x - \frac{x^2}{4} -zx\right]_{x=0}^{x=2(1-z)}\right. dz\\
-&amp;\qquad = \int_0^1 3\left(2(1-z) - (1-z)^2 - 2z(1-z)\right) dz\\
-&amp;\qquad = \int_0^1 3(1 - 2z +z^2) dz\\
-&amp;\qquad =  3 \left.\left[ z - z^2 + \frac{z^3}{3} \right]_0^1\right.\\
-&amp;\qquad = 3\left(1 - 1 +\frac{1}{3}\right) = 3\left(\frac{1}{3}\right) = 1.
-\end{align*}
-\]</span></p>
-<p><span class="math">\[
-\sum_{\substack{ a + b + c = 20 \\
-  a,b,c \ge 0 \\ a + 2b \ge 5 }} abc
-\]</span></p>
-<h1 id="hexastore">Hexastore</h1>
-<h2 id="installation">Installation</h2>
+<p><a href="https://travis-ci.org/crubier/Hexastore"><img src="https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square" alt="Travis" /></a> <a href="https://coveralls.io/r/crubier/Hexastore"><img src="https://img.shields.io/coveralls/crubier/Hexastore.svg?style=flat-square" alt="Coverage Status" /></a> <a href="https://gemnasium.com/crubier/Hexastore"><img src="https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square" alt="Gemnasium" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/dm/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/v/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/node/v/hexastore.svg?style=flat-square" alt="node" /></a> <a href="https://github.com/crubier/Hexastore"><img src="https://img.shields.io/github/tag/strongloop/express.svg?style=flat-square" alt="GitHub tag" /></a></p>
+<h1 id="installation">Installation</h1>
 <p>It is pure JS, so nothing fancy, just:</p>
 <pre><code>npm install hexastore</code></pre>
-<h2 id="usage">Usage</h2>
-<h3 id="create-a-database">Create a database</h3>
+<h1 id="usage">Usage</h1>
+<h2 id="create-a-database">Create a database</h2>
 <p>Just require Hexastore, and then you can start creating stores everywhere !</p>
 <pre><code>var Hexastore = require(&#39;Hexastore&#39;);
 var mydb = new Hexastore();</code></pre>
-<h3 id="add-triples">Add triples</h3>
-<h4 id="add-a-single-triple">Add a single triple</h4>
+<h2 id="add-triples">Add triples</h2>
+<h3 id="add-a-single-triple">Add a single triple</h3>
 <pre><code>mydb.put([&quot;hexastore&quot;,&quot;is&quot;,&quot;awesome&quot;]);</code></pre>
-<h4 id="add-a-collection-of-triples">Add a collection of triples</h4>
+<h3 id="add-a-collection-of-triples">Add a collection of triples</h3>
 <pre><code>mydb.putAll([
     [&quot;hexastore&quot;,&quot;is&quot;,&quot;nice&quot;],
     [&quot;hexastore&quot;,&quot;speed&quot;,&quot;fast&quot;],
     [&quot;javascript&quot;,&quot;is&quot;,&quot;nice&quot;]
   ]);</code></pre>
-<h4 id="add-triples-represented-as-nested-js-objects">Add triples represented as nested JS objects</h4>
+<h3 id="add-triples-represented-as-nested-js-objects">Add triples represented as nested JS objects</h3>
 <pre><code>mydb.addSPO({
     hexastore:{is:{awesome:true,nice:true},speed:{fast:true}},
     javascript:{is:{nice:true}}
@@ -227,7 +80,7 @@ mydb.addOSP(...);
 mydb.addOPS(...);
 mydb.addPSO(...);
 mydb.addPOS(...);</code></pre>
-<h4 id="add-named-js-objects">Add named JS Objects</h4>
+<h3 id="add-named-js-objects">Add named JS Objects</h3>
 <p>Finally, you can add arbitrary JS object this way, it acts a bit like Object Relational Mapping:</p>
 <pre><code>mydb.addObject(&quot;bob&quot;,{address:{number:10,street:&quot;Avenue des Champs Elysees&quot;,city:&quot;Paris&quot;,country:&quot;France&quot;},friend:[&quot;toto&quot;,&quot;titi&quot;,&quot;tata&quot;]})</code></pre>
 <p>Which is equivalent to:</p>
@@ -241,7 +94,7 @@ mydb.addPOS(...);</code></pre>
     [&quot;bob/friend&quot;,&quot;1&quot;,&quot;titi&quot;],
     [&quot;bob/friend&quot;,&quot;2&quot;,&quot;tata&quot;]
   ]);</code></pre>
-<h3 id="import-and-export">Import and export</h3>
+<h2 id="import-and-export">Import and export</h2>
 <p>Databases are imported and exported as Subjects containing Predicates containing Objects containing Values (SPO ordering). Import and export can work on normal JSON files, or on Zipped &quot;data.json&quot; files.</p>
 <pre><code>db.import(&quot;Mydatabase&quot;);    // Import &quot;Mydatabase.json&quot;
 db.importZip(&quot;Mydatabase&quot;); // Import &quot;Mydatabase.zip&quot;
@@ -250,8 +103,8 @@ db.importNt(&quot;Mydatabase&quot;);  // Import &quot;Mydatabase.nt&quot;
 db.export(&quot;Mydatabase&quot;);    // Export &quot;Mydatabase.json&quot;
 db.exportZip(&quot;Mydatabase&quot;); // Export &quot;Mydatabase.zip&quot;
 db.exportNt(&quot;Mydatabase&quot;);  // Export &quot;Mydatabase.nt&quot;</code></pre>
-<h3 id="search">Search</h3>
-<h4 id="simple-search">Simple search</h4>
+<h2 id="search">Search</h2>
+<h3 id="simple-search">Simple search</h3>
 <p>Searching is <strong>very</strong> simple. Just query a set of triples, adding <code>[]</code> around variable names. This acts a bit like SQL <code>JOIN</code> statements.</p>
 <pre><code>var result = db.search([
     [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
@@ -264,7 +117,7 @@ db.exportNt(&quot;Mydatabase&quot;);  // Export &quot;Mydatabase.nt&quot;</code>
   ]);
 // result == [{what:&quot;hexastore&quot;,howfast:&quot;fast&quot;}]</code></pre>
 <p>Queries are really fast, so don't hesitate to do complex queries.</p>
-<h4 id="using-filters">Using filters</h4>
+<h3 id="using-filters">Using filters</h3>
 <p>You can use filters to filter results, a bit like in SQL <code>WHERE</code> statements</p>
 <pre><code>var result = db.search([
       [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
@@ -272,9 +125,9 @@ db.exportNt(&quot;Mydatabase&quot;);  // Export &quot;Mydatabase.nt&quot;</code>
       return match.what.length &lt;10;
     })
 // result == [what:&quot;hexastore&quot;]</code></pre>
-<h2 id="tests-1">Tests</h2>
+<h1 id="tests">Tests</h1>
 <pre><code>gulp test</code></pre>
-<h2 id="contributing">Contributing</h2>
+<h1 id="contributing">Contributing</h1>
 <script>
 
   var menu = false;
@@ -291,17 +144,15 @@ db.exportNt(&quot;Mydatabase&quot;);  // Export &quot;Mydatabase.nt&quot;</code>
   }
 
   function showsearch(evt){
+    // document.getElementById("searchinput").value="";
     search=!search;
     menu=menu&&!search;
     render();
   }
 
   function dosearch() {
-
       window.find(document.getElementById("searchinput").value,false,false,true,false,true,false);
       document.getElementById("searchinput").focus();
-      console.log("searched");
-
   }
 
   function render() {

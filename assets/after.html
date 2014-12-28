@@ -14,17 +14,15 @@
   }
 
   function showsearch(evt){
+    // document.getElementById("searchinput").value="";
     search=!search;
     menu=menu&&!search;
     render();
   }
 
   function dosearch() {
-
       window.find(document.getElementById("searchinput").value,false,false,true,false,true,false);
       document.getElementById("searchinput").focus();
-      console.log("searched");
-
   }
 
   function render() {
