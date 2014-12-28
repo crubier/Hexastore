@@ -25,12 +25,18 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="assets/style.css" type="text/css" />
   <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-  <link rel="stylesheet" href="responsive-nav.css">
-  <script src="responsive-nav.js"></script>
 </head>
 <body>
+<div id="BUTTONS">
+<svg onclick="showmenu(evt)" width="38" height="38" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1792 1472v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"/></svg>
+<svg onclick="showsearch(evt)" width="38" height="38" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1344 960q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
+</div>
+
+<div id="SEARCH">
+  <input type="text" id="searchinput"></input>
+</div>
 <div id="TOC">
 <ul>
 <li><a href="#hello">Hello</a><ul>
@@ -51,12 +57,26 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ul></li>
 <li><a href="#math-again">Math again</a></li>
 </ul></li>
+<li><a href="#hexastore">Hexastore</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#create-a-database">Create a database</a></li>
+<li><a href="#add-triples">Add triples</a></li>
+<li><a href="#import-and-export">Import and export</a></li>
+<li><a href="#search">Search</a></li>
+</ul></li>
+<li><a href="#tests-1">Tests</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul></li>
 </ul>
 </div>
 <div class="figure">
-<img src="HexastoreLogo.svg" title="logo" />
+<img src="HexastoreLogo.svg" />
 
 </div>
+<p>A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.</p>
+<p>Hexastore is based on <a href="http://karras.rutgers.edu/hexastore.pdf">this research paper</a>. It is a way to structure RDF data such that queries are really fast. However, as implemented here, it has a 6 fold increase in memory usage as compared to a naive implementation of a triple store.</p>
+<p><a href="https://travis-ci.org/crubier/Hexastore"><img src="https://img.shields.io/travis/crubier/Hexastore.svg?style=flat-square" alt="Travis" /></a> <a href="https://coveralls.io/r/crubier/Hexastore"><img src="https://img.shields.io/coveralls/crubier/Hexastore.svg?style=flat-square" alt="Coverage Status" /></a> <a href="https://gemnasium.com/crubier/Hexastore"><img src="https://img.shields.io/gemnasium/crubier/Hexastore.svg?style=flat-square" alt="Gemnasium" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/dm/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/npm/v/hexastore.svg?style=flat-square" alt="npm" /></a> <a href="https://www.npmjs.com/package/hexastore"><img src="https://img.shields.io/node/v/hexastore.svg?style=flat-square" alt="node" /></a></p>
 <h1 id="hello">Hello</h1>
 <h2 id="tests">Tests</h2>
 <h3 id="some-math">Some math</h3>
@@ -171,13 +191,133 @@ dz\\
 <p><span class="math">\[
 \sum_{\substack{ a + b + c = 20 \\
   a,b,c \ge 0 \\ a + 2b \ge 5 }} abc
-  \]</span></p>
+\]</span></p>
+<h1 id="hexastore">Hexastore</h1>
+<h2 id="installation">Installation</h2>
+<p>It is pure JS, so nothing fancy, just:</p>
+<pre><code>npm install hexastore</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="create-a-database">Create a database</h3>
+<p>Just require Hexastore, and then you can start creating stores everywhere !</p>
+<pre><code>var Hexastore = require(&#39;Hexastore&#39;);
+var mydb = new Hexastore();</code></pre>
+<h3 id="add-triples">Add triples</h3>
+<h4 id="add-a-single-triple">Add a single triple</h4>
+<pre><code>mydb.put([&quot;hexastore&quot;,&quot;is&quot;,&quot;awesome&quot;]);</code></pre>
+<h4 id="add-a-collection-of-triples">Add a collection of triples</h4>
+<pre><code>mydb.putAll([
+    [&quot;hexastore&quot;,&quot;is&quot;,&quot;nice&quot;],
+    [&quot;hexastore&quot;,&quot;speed&quot;,&quot;fast&quot;],
+    [&quot;javascript&quot;,&quot;is&quot;,&quot;nice&quot;]
+  ]);</code></pre>
+<h4 id="add-triples-represented-as-nested-js-objects">Add triples represented as nested JS objects</h4>
+<pre><code>mydb.addSPO({
+    hexastore:{is:{awesome:true,nice:true},speed:{fast:true}},
+    javascript:{is:{nice:true}}
+  });</code></pre>
+<p>Or</p>
+<pre><code>mydb.addSOP({
+    hexastore:{awesome:{is:true},nice:{is:true},fast:{speed:true}},
+    javascript:{nice:{is:true}}
+  };)</code></pre>
+<p>You get it ? So basically you can use any of the 6 orderings of the hexastore :</p>
+<pre><code>mydb.addSPO(...);
+mydb.addSOP(...);
+mydb.addOSP(...);
+mydb.addOPS(...);
+mydb.addPSO(...);
+mydb.addPOS(...);</code></pre>
+<h4 id="add-named-js-objects">Add named JS Objects</h4>
+<p>Finally, you can add arbitrary JS object this way, it acts a bit like Object Relational Mapping:</p>
+<pre><code>mydb.addObject(&quot;bob&quot;,{address:{number:10,street:&quot;Avenue des Champs Elysees&quot;,city:&quot;Paris&quot;,country:&quot;France&quot;},friend:[&quot;toto&quot;,&quot;titi&quot;,&quot;tata&quot;]})</code></pre>
+<p>Which is equivalent to:</p>
+<pre><code>mydb.putAll([
+    [&quot;bob&quot;,&quot;address&quot;,&quot;bob/address&quot;],
+    [&quot;bob/address&quot;,&quot;number&quot;,&quot;10&quot;],
+    [&quot;bob/address&quot;,&quot;street&quot;,&quot;Avenue des Champs Elysees&quot;],
+    [&quot;bob/address&quot;,&quot;city&quot;,&quot;Paris&quot;],
+    [&quot;bob&quot;,&quot;friend&quot;,&quot;bob/friend&quot;],
+    [&quot;bob/friend&quot;,&quot;0&quot;,&quot;toto&quot;],
+    [&quot;bob/friend&quot;,&quot;1&quot;,&quot;titi&quot;],
+    [&quot;bob/friend&quot;,&quot;2&quot;,&quot;tata&quot;]
+  ]);</code></pre>
+<h3 id="import-and-export">Import and export</h3>
+<p>Databases are imported and exported as Subjects containing Predicates containing Objects containing Values (SPO ordering). Import and export can work on normal JSON files, or on Zipped &quot;data.json&quot; files.</p>
+<pre><code>db.import(&quot;Mydatabase&quot;);    // Import &quot;Mydatabase.json&quot;
+db.importZip(&quot;Mydatabase&quot;); // Import &quot;Mydatabase.zip&quot;
+db.importNt(&quot;Mydatabase&quot;);  // Import &quot;Mydatabase.nt&quot;
+
+db.export(&quot;Mydatabase&quot;);    // Export &quot;Mydatabase.json&quot;
+db.exportZip(&quot;Mydatabase&quot;); // Export &quot;Mydatabase.zip&quot;
+db.exportNt(&quot;Mydatabase&quot;);  // Export &quot;Mydatabase.nt&quot;</code></pre>
+<h3 id="search">Search</h3>
+<h4 id="simple-search">Simple search</h4>
+<p>Searching is <strong>very</strong> simple. Just query a set of triples, adding <code>[]</code> around variable names. This acts a bit like SQL <code>JOIN</code> statements.</p>
+<pre><code>var result = db.search([
+    [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
+  ]);
+// result == [{what:hexastore},{what:javascript}]</code></pre>
+<p>A bit more complex</p>
+<pre><code>var result = db.search([
+    [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
+    [[&quot;what&quot;],&quot;speed&quot;,[&quot;howfast&quot;]]
+  ]);
+// result == [{what:&quot;hexastore&quot;,howfast:&quot;fast&quot;}]</code></pre>
+<p>Queries are really fast, so don't hesitate to do complex queries.</p>
+<h4 id="using-filters">Using filters</h4>
+<p>You can use filters to filter results, a bit like in SQL <code>WHERE</code> statements</p>
+<pre><code>var result = db.search([
+      [[&quot;what&quot;],&quot;is&quot;,&quot;nice&quot;]
+    ]).filter(function(match){
+      return match.what.length &lt;10;
+    })
+// result == [what:&quot;hexastore&quot;]</code></pre>
+<h2 id="tests-1">Tests</h2>
+<pre><code>gulp test</code></pre>
+<h2 id="contributing">Contributing</h2>
 <script>
 
+  var menu = false;
+  var search = false;
+
+  render();
+  document.getElementById('TOC').addEventListener("click", showmenu, false);
 
 
-  
-  var nav = responsiveNav("#TOC");
+  function showmenu(evt) {
+    menu=!menu;
+    search=search&&!menu;
+    render();
+  }
+
+  function showsearch(evt){
+    search=!search;
+    menu=menu&&!search;
+    render();
+  }
+
+  function dosearch() {
+
+      window.find(document.getElementById("searchinput").value,false,false,true,false,true,false);
+      document.getElementById("searchinput").focus();
+      console.log("searched");
+
+  }
+
+  function render() {
+    document.getElementById('TOC').className = menu?"tocvisible":"tochidden";
+    document.getElementById('SEARCH').className = search?"searchvisible":"searchhidden";
+    if(search)document.getElementById("searchinput").focus();
+  }
+
+  document.getElementById('searchinput').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      dosearch();
+      return false;
+    }
+  };
 </script>
 </body>
 </html>

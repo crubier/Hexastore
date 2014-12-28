@@ -1,0 +1,44 @@
+<script>
+
+  var menu = false;
+  var search = false;
+
+  render();
+  document.getElementById('TOC').addEventListener("click", showmenu, false);
+
+
+  function showmenu(evt) {
+    menu=!menu;
+    search=search&&!menu;
+    render();
+  }
+
+  function showsearch(evt){
+    search=!search;
+    menu=menu&&!search;
+    render();
+  }
+
+  function dosearch() {
+
+      window.find(document.getElementById("searchinput").value,false,false,true,false,true,false);
+      document.getElementById("searchinput").focus();
+      console.log("searched");
+
+  }
+
+  function render() {
+    document.getElementById('TOC').className = menu?"tocvisible":"tochidden";
+    document.getElementById('SEARCH').className = search?"searchvisible":"searchhidden";
+    if(search)document.getElementById("searchinput").focus();
+  }
+
+  document.getElementById('searchinput').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      dosearch();
+      return false;
+    }
+  };
+</script>
