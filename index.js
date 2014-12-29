@@ -635,7 +635,6 @@ Hexastore.prototype.querySP_ = function(element) {
       }
     }
   }
-
   return res;
 };
 
@@ -663,7 +662,6 @@ Hexastore.prototype.query_PO = function(element) {
       }
     }
   }
-
   return res;
 };
 
@@ -691,7 +689,6 @@ Hexastore.prototype.queryS_O = function(element) {
       }
     }
   }
-
   return res;
 };
 
