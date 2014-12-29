@@ -46,7 +46,7 @@ Hexastore.prototype.importJSON = function(dbname) {
 // Import a database previously exported with exportZip
 Hexastore.prototype.importZip = function(dbname) {
   var zip = new AZip(dbname + ".zip");
-  // outputs the content of some_folder/my_file.txt
+  // outputs the content of somefolder/myfile.txt
   this.addSPO(JSON.parse(zip.readAsText("data.json")));
 };
 
@@ -431,7 +431,7 @@ Hexastore.prototype.addJSObjectAsJSON = function(obj) {
 
 // Make a copy of all facts related to a subject
 Hexastore.prototype.copySubject = function(subj, newsubj) {
-  var res = this.queryS__([subj, null, null]);
+  var res = this.querySXX([subj, null, null]);
   this.putAll(res.map(function(el) {
     return [newsubj, el[1], el[2], el[3]];
   }));
@@ -440,7 +440,7 @@ Hexastore.prototype.copySubject = function(subj, newsubj) {
 
 // Make a copy of all facts related to a predicate
 Hexastore.prototype.copyPredicate = function(pred, newpred) {
-  var res = this.query_P_([null, pred, null]);
+  var res = this.queryXPX([null, pred, null]);
   this.putAll(res.map(function(el) {
     return [el[0], newpred, el[2], el[3]];
   }));
@@ -449,7 +449,7 @@ Hexastore.prototype.copyPredicate = function(pred, newpred) {
 
 // Make a copy of all facts related to an object
 Hexastore.prototype.copyObject = function(obj, newobj) {
-  var res = this.query__O([null, null, obj]);
+  var res = this.queryXXO([null, null, obj]);
   this.putAll(res.map(function(el) {
     return [el[0], el[1], newobj, el[3]];
   }));
@@ -489,7 +489,7 @@ Hexastore.prototype.all = function() {
 
 
 // Query the store for all facts with nothing specific (all facts)
-Hexastore.prototype.query___ = function(element) {
+Hexastore.prototype.queryXXX = function(element) {
 
   var res = [];
 
@@ -522,7 +522,7 @@ Hexastore.prototype.query___ = function(element) {
 };
 
 // Query the store for all facts with specific subject
-Hexastore.prototype.queryS__ = function(element) {
+Hexastore.prototype.querySXX = function(element) {
   var s = element[0];
 
   var res = [];
@@ -552,7 +552,7 @@ Hexastore.prototype.queryS__ = function(element) {
 };
 
 // Query the store for all facts with specific predicate
-Hexastore.prototype.query_P_ = function(element) {
+Hexastore.prototype.queryXPX = function(element) {
   var p = element[1];
 
   var res = [];
@@ -582,7 +582,7 @@ Hexastore.prototype.query_P_ = function(element) {
 };
 
 // Query the store for all facts with specific object
-Hexastore.prototype.query__O = function(element) {
+Hexastore.prototype.queryXXO = function(element) {
   var o = element[2];
 
   var res = [];
@@ -612,7 +612,7 @@ Hexastore.prototype.query__O = function(element) {
 };
 
 // Query the store for all facts with specific subject and predicate
-Hexastore.prototype.querySP_ = function(element) {
+Hexastore.prototype.querySPX = function(element) {
   var s = element[0];
   var p = element[1];
 
@@ -639,7 +639,7 @@ Hexastore.prototype.querySP_ = function(element) {
 };
 
 // Query the store for all facts with specific predicate and object
-Hexastore.prototype.query_PO = function(element) {
+Hexastore.prototype.queryXPO = function(element) {
   var p = element[1];
   var o = element[2];
 
@@ -666,7 +666,7 @@ Hexastore.prototype.query_PO = function(element) {
 };
 
 // Query the store for all facts with specific subject and object
-Hexastore.prototype.queryS_O = function(element) {
+Hexastore.prototype.querySXO = function(element) {
   var s = element[0];
   var o = element[2];
 
@@ -723,27 +723,27 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
   if (queryElement[0] instanceof Array) {
     if (queryElement[1] instanceof Array) {
       if (queryElement[2] instanceof Array) {
-        return this.query___(queryElement);
+        return this.queryXXX(queryElement);
       } else {
-        return this.query__O(queryElement);
+        return this.queryXXO(queryElement);
       }
     } else {
       if (queryElement[2] instanceof Array) {
-        return this.query_P_(queryElement);
+        return this.queryXPX(queryElement);
       } else {
-        return this.query_PO(queryElement);
+        return this.queryXPO(queryElement);
       }
     }
   } else {
     if (queryElement[1] instanceof Array) {
       if (queryElement[2] instanceof Array) {
-        return this.queryS__(queryElement);
+        return this.querySXX(queryElement);
       } else {
-        return this.queryS_O(queryElement);
+        return this.querySXO(queryElement);
       }
     } else {
       if (queryElement[2] instanceof Array) {
-        return this.querySP_(queryElement);
+        return this.querySPX(queryElement);
       } else {
         return this.querySPO(queryElement);
       }

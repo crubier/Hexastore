@@ -263,40 +263,40 @@ describe('Read', function() {
         }
       });
     });
-    it('query___', function() {
+    it('queryXXX', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.query___(['a', 'b', 'c']));
+      ], db.queryXXX(['a', 'b', 'c']));
     });
-    it('queryS__', function() {
+    it('querySXX', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.queryS__(['a', 'b', 'c']));
+      ], db.querySXX(['a', 'b', 'c']));
     });
-    it('query_P_', function() {
+    it('queryXPX', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.query_P_(['a', 'b', 'c']));
+      ], db.queryXPX(['a', 'b', 'c']));
     });
-    it('query__O', function() {
+    it('queryXXO', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.query__O(['a', 'b', 'c']));
+      ], db.queryXXO(['a', 'b', 'c']));
     });
-    it('querySP_', function() {
+    it('querySPX', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.querySP_(['a', 'b', 'c']));
+      ], db.querySPX(['a', 'b', 'c']));
     });
-    it('queryS_O', function() {
+    it('querySXO', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.queryS_O(['a', 'b', 'c']));
+      ], db.querySXO(['a', 'b', 'c']));
     });
-    it('query_PO', function() {
+    it('queryXPO', function() {
       assert.deepEqual([
         ['a', 'b', 'c', true]
-      ], db.query_PO(['a', 'b', 'c']));
+      ], db.queryXPO(['a', 'b', 'c']));
     });
     it('querySPO', function() {
       assert.deepEqual([
@@ -460,13 +460,13 @@ describe('Delete', function() {
 
 
 Geometry2D = {
-  ___: null,
-  __O: null,
-  _P_: null,
-  _PO: null,
-  S__: null,
-  S_O: null,
-  SP_: null,
+  XXX: null,
+  XXO: null,
+  XPX: null,
+  XPO: null,
+  SXX: null,
+  SXO: null,
+  SPX: null,
   SPO: function(element) {
     var s = element[0];
     var p = element[1];
@@ -484,31 +484,31 @@ Geometry2D = {
 };
 
 Identity = {
-  ___: function(f) {
+  XXX: function(f) {
     return null;
   },
-  __O: function(f) {
+  XXO: function(f) {
     return [
       [f[2], "equals", f[2], true]
     ];
   },
-  _P_: function(f) {
+  XPX: function(f) {
     return null;
   },
-  _PO: function(f) {
+  XPO: function(f) {
     return (f[1] === "equals") ? [
       [f[2], "equals", f[2], true]
     ] : null;
   },
-  S__: function(f) {
+  SXX: function(f) {
     return [
       [f[0], "equals", f[0], true]
     ];
   },
-  S_O: function(f) {
+  SXO: function(f) {
     return (f[0] === f[2]) ? [f[0], "equals", f[2], true] : [];
   },
-  SP_: function(f) {
+  SPX: function(f) {
     return (f[1] === "equals") ? [
       [f[0], "equals", f[0], true]
     ] : null;
