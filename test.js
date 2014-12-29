@@ -465,13 +465,27 @@ describe('Delete', function() {
 
 
 Geometry2D = {
-  XXX: null,
-  XXO: null,
-  XPX: null,
-  XPO: null,
-  SXX: null,
-  SXO: null,
-  SPX: null,
+  XXX: function(f) {
+    return null;
+  },
+  XXO: function(f) {
+    return null;
+  },
+  XPX: function(f) {
+    return null;
+  },
+  XPO: function(f) {
+    return null;
+  },
+  SXX: function(f) {
+    return null;
+  },
+  SXO: function(f) {
+    return null;
+  },
+  SPX: function(f) {
+    return null;
+  },
   SPO: function(element) {
     var s = element[0];
     var p = element[1];
