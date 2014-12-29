@@ -1,5 +1,6 @@
 var fs = require('fs');
 var AZip = require('adm-zip');
+var uuid = require('node-uuid');
 
 function Hexastore() {
   this.spo = {};
@@ -11,7 +12,7 @@ function Hexastore() {
 }
 
 // Export a database to import with import
-Hexastore.prototype.export = function(dbname) {
+Hexastore.prototype.exportJSON = function(dbname) {
   fs.writeFileSync(dbname + ".json", JSON.stringify(this.spo));
 };
 
@@ -27,20 +28,19 @@ Hexastore.prototype.exportZip = function(dbname) {
 
 // Export a database to a NT file
 Hexastore.prototype.exportNt = function(ntname) {
-  var res = this.search([['s'],['p'],['o']]);
+  var res = this.all();
   var str = "";
-  for(var i =0;i<res.length;i++) {
-    str = str + res[i].s + ' ' + res[i].p + ' ' + res[i].o+' .\n';
+  for (var i = 0; i < res.length; i++) {
+    str = str + res[i][0] + ' ' + res[i][1] + ' ' + res[i][2] + ' '+JSON.stringify(res[i][3])+'\n';
   }
   fs.writeFileSync(ntname + ".nt", str);
 };
 
 // Import a database previously exported with export
-Hexastore.prototype.import = function(dbname) {
+Hexastore.prototype.importJSON = function(dbname) {
   try {
     this.addSPO(JSON.parse(fs.readFileSync(dbname + ".json")));
   } catch (err) {
-    console.log(err);
   }
 };
 
@@ -52,7 +52,7 @@ Hexastore.prototype.importZip = function(dbname) {
 };
 
 // Import a database in a NT file
-Hexastore.prototype.importNt = function(ntname,callback) {
+Hexastore.prototype.importNt = function(ntname, callback) {
   function readLines(input, func) {
     var remaining = '';
 
@@ -73,7 +73,7 @@ Hexastore.prototype.importNt = function(ntname,callback) {
       if (remaining.length > 0) {
         func(remaining);
       }
-      callback();
+      if(callback!==undefined && callback !==null)callback();
     });
   }
 
@@ -81,11 +81,33 @@ Hexastore.prototype.importNt = function(ntname,callback) {
 
   function func(line) {
     var elements = line.match(/[^\s"']+|"([^"]*)"|'([^']*)'/g);
+    try{elements[3]=JSON.parse(elements[3]);}catch(err){}
     that.put(elements);
   }
 
-  var input = fs.createReadStream(ntname+'.nt');
+  var input = fs.createReadStream(ntname + '.nt');
   readLines(input, func);
+};
+
+// get the size of the hexastore
+Hexastore.prototype.size = function() {
+  var count = 0;
+  for (var s in this.spo) {
+    if (this.spo.hasOwnProperty(s)) {
+      for (var p in this.spo[s]) {
+        if (this.spo[s].hasOwnProperty(p)) {
+          for (var o in this.spo[s][p]) {
+            if (this.spo[s][p].hasOwnProperty(o)) {
+              if (this.spo[s][p][o] !== undefined) {
+                count++;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return count;
 };
 
 // Add a single triple to the store
@@ -163,10 +185,10 @@ Hexastore.prototype.addSPO = function(element) {
   }
 };
 
-Hexastore.prototype.setSPO = function(element) {
-  this.clear();
-  this.addSPO(element);
-};
+// Hexastore.prototype.setSPO = function(element) {
+//   this.clear();
+//   this.addSPO(element);
+// };
 
 Hexastore.prototype.getSPO = function() {
   return this.spo;
@@ -187,10 +209,10 @@ Hexastore.prototype.addSOP = function(element) {
   }
 };
 
-Hexastore.prototype.setSOP = function(element) {
-  this.clear();
-  this.addSOP(element);
-};
+// Hexastore.prototype.setSOP = function(element) {
+//   this.clear();
+//   this.addSOP(element);
+// };
 
 Hexastore.prototype.getSOP = function() {
   return this.sop;
@@ -211,10 +233,10 @@ Hexastore.prototype.addPSO = function(element) {
   }
 };
 
-Hexastore.prototype.setPSO = function(element) {
-  this.clear();
-  this.addPSO(element);
-};
+// Hexastore.prototype.setPSO = function(element) {
+//   this.clear();
+//   this.addPSO(element);
+// };
 
 Hexastore.prototype.getPSO = function() {
   return this.pso;
@@ -235,10 +257,10 @@ Hexastore.prototype.addPOS = function(element) {
   }
 };
 
-Hexastore.prototype.setPOS = function(element) {
-  this.clear();
-  this.addPOS(element);
-};
+// Hexastore.prototype.setPOS = function(element) {
+//   this.clear();
+//   this.addPOS(element);
+// };
 
 Hexastore.prototype.getPOS = function() {
   return this.pos;
@@ -259,10 +281,10 @@ Hexastore.prototype.addOSP = function(element) {
   }
 };
 
-Hexastore.prototype.setOSP = function(element) {
-  this.clear();
-  this.addOSP(element);
-};
+// Hexastore.prototype.setOSP = function(element) {
+//   this.clear();
+//   this.addOSP(element);
+// };
 
 Hexastore.prototype.getOSP = function() {
   return this.osp;
@@ -283,10 +305,10 @@ Hexastore.prototype.addOPS = function(element) {
   }
 };
 
-Hexastore.prototype.setOPS = function(element) {
-  this.clear();
-  this.addOPS(element);
-};
+// Hexastore.prototype.setOPS = function(element) {
+//   this.clear();
+//   this.addOPS(element);
+// };
 
 Hexastore.prototype.getOPS = function() {
   return this.ops;
@@ -296,6 +318,111 @@ Hexastore.prototype.getOPS = function() {
 
 
 
+
+
+
+
+// Add object as a star of nodes, with name in the center, and name/prop1 around
+Hexastore.prototype.addJSObjectAsPath = function(obj,name,separator) {
+  var actualseparator;
+  if(separator===undefined) {
+    actualseparator = "/";
+  } else {
+    actualseparator = separator;
+  }
+  if(obj === Object(obj)) {
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        this.put([name,prop,this.addJSObjectAsPath(obj[prop],name+actualseparator+prop),true]);
+      }
+    }
+    return name;
+  } else if(typeof obj == 'string' || obj instanceof String) {
+    return obj;
+  } else {
+    return JSON.stringify(obj);
+  }
+};
+
+// Add object as a star of nodes with UUID names except for the leaves
+Hexastore.prototype.addJSObjectAsUUID = function(obj) {
+  if(obj === Object(obj)) {
+    var name=uuid.v4();
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        this.put([name,prop,this.addJSObjectAsUUID(obj[prop]),true]);
+      }
+    }
+    return name;
+  } else if(typeof obj == 'string' || obj instanceof String) {
+    return obj;
+  } else {
+    return JSON.stringify(obj);
+  }
+};
+
+// Add object as a star of nodes with JSON names except for the leaves
+Hexastore.prototype.addJSObjectAsJSON = function(obj) {
+  if(obj === Object(obj)) {
+    var name=JSON.stringify(obj);
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        this.put([name,prop,this.addJSObjectAsJSON(obj[prop]),true]);
+      }
+    }
+    return name;
+  } else if(typeof obj == 'string' || obj instanceof String) {
+    return obj;
+  } else {
+    return JSON.stringify(obj);
+  }
+};
+
+// Make a copy of all facts related to a subject
+Hexastore.prototype.copySubject = function(subj,newsubj) {
+  var res = this.queryS__([subj,null,null]);
+  this.putAll(res.map(function(el){return [newsubj,el[1],el[2],el[3]];}));
+  return res.length;
+};
+
+// Make a copy of all facts related to a predicate
+Hexastore.prototype.copyPredicate = function(pred,newpred) {
+  var res = this.query_P_([null,pred,null]);
+  this.putAll(res.map(function(el){return [el[0],newpred,el[2],el[3]];}));
+  return res.length;
+};
+
+// Make a copy of all facts related to an object
+Hexastore.prototype.copyObject = function(obj,newobj) {
+  var res = this.query__O([null,null,obj]);
+  this.putAll(res.map(function(el){return [el[0],el[1],newobj,el[3]];}));
+  return res.length;
+};
+
+
+Hexastore.prototype.all = function() {
+  var res = [];
+  var subj = this.spo;
+  if (subj !== undefined) {
+    for (var subject in subj) {
+      var pred = subj[subject];
+      if (pred !== undefined) {
+        for (var predicate in pred) {
+          var obj = pred[predicate];
+          if (obj !== undefined) {
+            for (var object in obj) {
+              var val = obj[object];
+              if (val !== undefined) {
+                res.push([subject, predicate, object, val]);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return res;
+};
 
 
 // Query the store for all facts with nothing specific (all facts)
@@ -553,7 +680,6 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
 };
 
 
-//TODO : Add named js objects, star like
 
 
 // // Query planner

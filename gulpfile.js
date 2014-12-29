@@ -12,6 +12,7 @@ function onError(err) {
   }
   else {
     console.log(err.toString());
+    process.exit(1);
   }
 }
 
@@ -21,11 +22,20 @@ gulp.task ('test',['clean'],function(cb) {
   .pipe(istanbul.hookRequire())
   .on('finish', function () {
     gulp.src(['test.js'])
-    .pipe(mocha())
+    .pipe(mocha({reporter:"spec"}))
     .pipe(istanbul.writeReports())
-    .on('end', cb);
-  });
+    .on('end', cb)
+    .on('error',onError);
+  })
+  .on('error',onError);
 });
+
+
+// gulp.task('test-report', function() {
+//   return gulp.src(['test.js'])
+//   .pipe(mocha({reporter:"doc"}))
+//   .pipe(gulp.dest('test-report'));
+// });
 
 gulp.task('clean', function (cb) {
   del(".coverdata", cb);
@@ -37,6 +47,7 @@ gulp.task('coveralls',['test'], function() {
 });
 
 gulp.task('watch', function() {
+  watching=true;
   gulp.watch('**/*.js', ['test']);
 });
 
