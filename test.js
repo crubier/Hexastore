@@ -4,6 +4,8 @@ var assert = chai.assert;
 
 var Hexastore = require('./index.js');
 
+var db;
+
 describe('Initialize', function() {
   it('create new hexastore', function() {
     assert.doesNotThrow(function() {
@@ -51,7 +53,7 @@ describe('Create', function() {
         });
       });
       assert.equal(1, db.size());
-      assert.deepEqual(db.getSPO(),{
+      assert.deepEqual(db.getSPO(), {
         'a': {
           'b': {
             'c': true
@@ -70,7 +72,7 @@ describe('Create', function() {
         });
       });
       assert.equal(1, db.size());
-      assert.deepEqual(db.getSOP(),{
+      assert.deepEqual(db.getSOP(), {
         'aa': {
           'bb': {
             'cc': true
@@ -89,7 +91,7 @@ describe('Create', function() {
         });
       });
       assert.equal(1, db.size());
-      assert.deepEqual(db.getOSP(),{
+      assert.deepEqual(db.getOSP(), {
         'aaa': {
           'bbb': {
             'ccc': true
@@ -108,7 +110,7 @@ describe('Create', function() {
         });
       });
       assert.equal(1, db.size());
-      assert.deepEqual(db.getOPS(),{
+      assert.deepEqual(db.getOPS(), {
         'aaaa': {
           'bbbb': {
             'cccc': true
@@ -127,7 +129,7 @@ describe('Create', function() {
         });
       });
       assert.equal(1, db.size());
-      assert.deepEqual(db.getPSO(),{
+      assert.deepEqual(db.getPSO(), {
         'aaaaa': {
           'bbbbb': {
             'ccccc': true
@@ -146,7 +148,7 @@ describe('Create', function() {
         });
       });
       assert.equal(1, db.size());
-      assert.deepEqual(db.getPOS(),{
+      assert.deepEqual(db.getPOS(), {
         'aaaaaa': {
           'bbbbbb': {
             'cccccc': true
@@ -158,42 +160,64 @@ describe('Create', function() {
   describe('addJSObject', function() {
     it('addJSObjectAsPath', function() {
       assert.doesNotThrow(function() {
-        db.addJSObjectAsPath({know: "joe",lol:{wow:"hab"},a:1},"bob");
+        db.addJSObjectAsPath({
+          know: "joe",
+          lol: {
+            wow: "hab"
+          },
+          a: 1
+        }, "bob");
       });
       assert.equal(4, db.size());
-      assert.containOneLike(db.all(), ['bob', 'know', 'joe',true]);
-      assert.containOneLike(db.all(), ['bob', 'a', '1',true]);
-      assert.containOneLike(db.all(), ['bob/lol', 'wow', 'hab',true]);
-      assert.containOneLike(db.all(), ['bob', 'lol', 'bob/lol',true]);
+      assert.containOneLike(db.all(), ['bob', 'know', 'joe', true]);
+      assert.containOneLike(db.all(), ['bob', 'a', '1', true]);
+      assert.containOneLike(db.all(), ['bob/lol', 'wow', 'hab', true]);
+      assert.containOneLike(db.all(), ['bob', 'lol', 'bob/lol', true]);
       assert.doesNotThrow(function() {
-        db.addJSObjectAsPath({a:{b:1}},"bob",">");
+        db.addJSObjectAsPath({
+          a: {
+            b: 1
+          }
+        }, "bob", ">");
       });
-      assert.containOneLike(db.all(), ['bob', 'a', 'bob>a',true]);
-      assert.containOneLike(db.all(), ['bob>a', 'b', '1',true]);
+      assert.containOneLike(db.all(), ['bob', 'a', 'bob>a', true]);
+      assert.containOneLike(db.all(), ['bob>a', 'b', '1', true]);
     });
     it('addJSObjectAsJSON', function() {
       var added;
       assert.doesNotThrow(function() {
-        added=db.addJSObjectAsJSON({know: "joe",lol:{wow:"hab"},a:1});
+        added = db.addJSObjectAsJSON({
+          know: "joe",
+          lol: {
+            wow: "hab"
+          },
+          a: 1
+        });
       });
       assert.equal(4, db.size());
-      assert.containOneLike(db.all(), [added, 'know', 'joe',true]);
-      assert.containOneLike(db.all(), [added, 'a', '1',true]);
-      assert.containOneLike(db.all(), [added, 'lol', '{"wow":"hab"}',true]);
-      assert.containOneLike(db.all(), ['{"wow":"hab"}', 'wow', 'hab',true]);
+      assert.containOneLike(db.all(), [added, 'know', 'joe', true]);
+      assert.containOneLike(db.all(), [added, 'a', '1', true]);
+      assert.containOneLike(db.all(), [added, 'lol', '{"wow":"hab"}', true]);
+      assert.containOneLike(db.all(), ['{"wow":"hab"}', 'wow', 'hab', true]);
     });
     it('addJSObjectAsUUID', function() {
       var added;
       assert.doesNotThrow(function() {
-        added=db.addJSObjectAsUUID({know: "joe",lol:{wow:"hab"},a:1});
+        added = db.addJSObjectAsUUID({
+          know: "joe",
+          lol: {
+            wow: "hab"
+          },
+          a: 1
+        });
       });
       assert.equal(4, db.size());
-      assert.containOneLike(db.all(), [added, 'know', 'joe',true]);
-      assert.containOneLike(db.all(), [added, 'a', '1',true]);
+      assert.containOneLike(db.all(), [added, 'know', 'joe', true]);
+      assert.containOneLike(db.all(), [added, 'a', '1', true]);
     });
   });
   describe('copy', function() {
-    beforeEach( function() {
+    beforeEach(function() {
       db.clear();
       db.putAll([
         ['hey', 'hey', 'ho'],
@@ -204,25 +228,25 @@ describe('Create', function() {
     });
     it('copySubject', function() {
       assert.doesNotThrow(function() {
-        db.copySubject("hey","bobie");
+        db.copySubject("hey", "bobie");
       });
-      assert.containOneLike(db.all(), ["bobie", 'hey', 'ho',true]);
-      assert.containOneLike(db.all(), ["bobie", 'hay', 'ha',true]);
+      assert.containOneLike(db.all(), ["bobie", 'hey', 'ho', true]);
+      assert.containOneLike(db.all(), ["bobie", 'hay', 'ha', true]);
     });
     it('copyPredicate', function() {
       assert.doesNotThrow(function() {
-        db.copyPredicate("hey","bo");
+        db.copyPredicate("hey", "bo");
       });
-      assert.containOneLike(db.all(), ["hey", 'bo', 'ho',true]);
-      assert.containOneLike(db.all(), ["hi", 'bo', 'ha',true]);
-      assert.containOneLike(db.all(), ["hi", 'bo', 'hon',true]);
+      assert.containOneLike(db.all(), ["hey", 'bo', 'ho', true]);
+      assert.containOneLike(db.all(), ["hi", 'bo', 'ha', true]);
+      assert.containOneLike(db.all(), ["hi", 'bo', 'hon', true]);
     });
     it('copyObject', function() {
       assert.doesNotThrow(function() {
-        db.copyObject("ha","lid");
+        db.copyObject("ha", "lid");
       });
-      assert.containOneLike(db.all(), ["hey", 'hay', 'lid',true]);
-      assert.containOneLike(db.all(), ["hi", 'hey', 'lid',true]);
+      assert.containOneLike(db.all(), ["hey", 'hay', 'lid', true]);
+      assert.containOneLike(db.all(), ["hi", 'hey', 'lid', true]);
     });
   });
 });
@@ -369,14 +393,14 @@ describe('Import / Export', function() {
       }
     });
   });
-  it('json',function(){
+  it('json', function() {
     assert.doesNotThrow(function() {
       db.exportJSON('hexastoretest1');
       db.clear();
       db.importJSON('hexastoretest1');
     });
     assert.equal(1, db.size());
-    assert.deepEqual(db.getSPO(),{
+    assert.deepEqual(db.getSPO(), {
       'aaa': {
         'bbb': {
           'ccc': true
@@ -384,14 +408,14 @@ describe('Import / Export', function() {
       }
     });
   });
-  it('zip',function(){
+  it('zip', function() {
     assert.doesNotThrow(function() {
       db.exportZip('hexastoretest1');
       db.clear();
       db.importZip('hexastoretest1');
     });
     assert.equal(1, db.size());
-    assert.deepEqual(db.getSPO(),{
+    assert.deepEqual(db.getSPO(), {
       'aaa': {
         'bbb': {
           'ccc': true
@@ -399,13 +423,13 @@ describe('Import / Export', function() {
       }
     });
   });
-  it('nt',function(){
+  it('nt', function() {
     assert.doesNotThrow(function() {
       db.exportNt('hexastoretest1');
       db.clear();
-      db.importNt('hexastoretest1',function(){
+      db.importNt('hexastoretest1', function() {
         assert.equal(1, db.size());
-        assert.deepEqual(db.getSPO(),{
+        assert.deepEqual(db.getSPO(), {
           'aaa': {
             'bbb': {
               'ccc': true

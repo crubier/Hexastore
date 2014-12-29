@@ -31,7 +31,7 @@ Hexastore.prototype.exportNt = function(ntname) {
   var res = this.all();
   var str = "";
   for (var i = 0; i < res.length; i++) {
-    str = str + res[i][0] + ' ' + res[i][1] + ' ' + res[i][2] + ' '+JSON.stringify(res[i][3])+'\n';
+    str = str + res[i][0] + ' ' + res[i][1] + ' ' + res[i][2] + ' ' + JSON.stringify(res[i][3]) + '\n';
   }
   fs.writeFileSync(ntname + ".nt", str);
 };
@@ -40,8 +40,7 @@ Hexastore.prototype.exportNt = function(ntname) {
 Hexastore.prototype.importJSON = function(dbname) {
   try {
     this.addSPO(JSON.parse(fs.readFileSync(dbname + ".json")));
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 
 // Import a database previously exported with exportZip
@@ -73,7 +72,9 @@ Hexastore.prototype.importNt = function(ntname, callback) {
       if (remaining.length > 0) {
         func(remaining);
       }
-      if(callback!==undefined && callback !==null)callback();
+      if (callback !== undefined && callback !== null) {
+        callback();
+      }
     });
   }
 
@@ -81,7 +82,9 @@ Hexastore.prototype.importNt = function(ntname, callback) {
 
   function func(line) {
     var elements = line.match(/[^\s"']+|"([^"]*)"|'([^']*)'/g);
-    try{elements[3]=JSON.parse(elements[3]);}catch(err){}
+    try {
+      elements[3] = JSON.parse(elements[3]);
+    } catch (err) {}
     that.put(elements);
   }
 
@@ -117,40 +120,52 @@ Hexastore.prototype.put = function(element) {
   var o = element[2];
   var v = element[3] ? element[3] : true;
 
-  if (this.spo[s] === undefined)
+  if (this.spo[s] === undefined) {
     this.spo[s] = {};
-  if (this.spo[s][p] === undefined)
+  }
+  if (this.spo[s][p] === undefined) {
     this.spo[s][p] = {};
+  }
   this.spo[s][p][o] = v;
 
-  if (this.sop[s] === undefined)
+  if (this.sop[s] === undefined) {
     this.sop[s] = {};
-  if (this.sop[s][o] === undefined)
+  }
+  if (this.sop[s][o] === undefined) {
     this.sop[s][o] = {};
+  }
   this.sop[s][o][p] = v;
 
-  if (this.pso[p] === undefined)
+  if (this.pso[p] === undefined) {
     this.pso[p] = {};
-  if (this.pso[p][s] === undefined)
+  }
+  if (this.pso[p][s] === undefined) {
     this.pso[p][s] = {};
+  }
   this.pso[p][s][o] = v;
 
-  if (this.pos[p] === undefined)
+  if (this.pos[p] === undefined) {
     this.pos[p] = {};
-  if (this.pos[p][o] === undefined)
+  }
+  if (this.pos[p][o] === undefined) {
     this.pos[p][o] = {};
+  }
   this.pos[p][o][s] = v;
 
-  if (this.osp[o] === undefined)
+  if (this.osp[o] === undefined) {
     this.osp[o] = {};
-  if (this.osp[o][s] === undefined)
+  }
+  if (this.osp[o][s] === undefined) {
     this.osp[o][s] = {};
+  }
   this.osp[o][s][p] = v;
 
-  if (this.ops[o] === undefined)
+  if (this.ops[o] === undefined) {
     this.ops[o] = {};
-  if (this.ops[o][p] === undefined)
+  }
+  if (this.ops[o][p] === undefined) {
     this.ops[o][p] = {};
+  }
   this.ops[o][p][s] = v;
 };
 
@@ -174,12 +189,18 @@ Hexastore.prototype.clear = function() {
 Hexastore.prototype.addSPO = function(element) {
   var subj = element;
   for (var subject in subj) {
-    var pred = subj[subject];
-    for (var predicate in pred) {
-      var obj = pred[predicate];
-      for (var object in obj) {
-        var val = obj[object];
-        this.put([subject, predicate, object, val]);
+    if (subj.hasOwnProperty(subject)) {
+      var pred = subj[subject];
+      for (var predicate in pred) {
+        if (pred.hasOwnProperty(predicate)) {
+          var obj = pred[predicate];
+          for (var object in obj) {
+            if (obj.hasOwnProperty(object)) {
+              var val = obj[object];
+              this.put([subject, predicate, object, val]);
+            }
+          }
+        }
       }
     }
   }
@@ -198,12 +219,18 @@ Hexastore.prototype.getSPO = function() {
 Hexastore.prototype.addSOP = function(element) {
   var subj = element;
   for (var subject in subj) {
-    var obj = subj[subject];
-    for (var object in obj) {
-      var pred = obj[object];
-      for (var predicate in pred) {
-        var val = pred[predicate];
-        this.put([subject, predicate, object, val]);
+    if (subj.hasOwnProperty(subject)) {
+      var obj = subj[subject];
+      for (var object in obj) {
+        if (obj.hasOwnProperty(object)) {
+          var pred = obj[object];
+          for (var predicate in pred) {
+            if (pred.hasOwnProperty(predicate)) {
+              var val = pred[predicate];
+              this.put([subject, predicate, object, val]);
+            }
+          }
+        }
       }
     }
   }
@@ -222,12 +249,18 @@ Hexastore.prototype.getSOP = function() {
 Hexastore.prototype.addPSO = function(element) {
   var pred = element;
   for (var predicate in pred) {
-    var subj = pred[predicate];
-    for (var subject in subj) {
-      var obj = subj[subject];
-      for (var object in obj) {
-        var val = obj[object];
-        this.put([subject, predicate, object, val]);
+    if (pred.hasOwnProperty(predicate)) {
+      var subj = pred[predicate];
+      for (var subject in subj) {
+        if (subj.hasOwnProperty(subject)) {
+          var obj = subj[subject];
+          for (var object in obj) {
+            if (obj.hasOwnProperty(object)) {
+              var val = obj[object];
+              this.put([subject, predicate, object, val]);
+            }
+          }
+        }
       }
     }
   }
@@ -246,12 +279,18 @@ Hexastore.prototype.getPSO = function() {
 Hexastore.prototype.addPOS = function(element) {
   var pred = element;
   for (var predicate in pred) {
-    var obj = pred[predicate];
-    for (var object in obj) {
-      var subj = obj[object];
-      for (var subject in subj) {
-        var val = subj[subject];
-        this.put([subject, predicate, object, val]);
+    if (pred.hasOwnProperty(predicate)) {
+      var obj = pred[predicate];
+      for (var object in obj) {
+        if (obj.hasOwnProperty(object)) {
+          var subj = obj[object];
+          for (var subject in subj) {
+            if (subj.hasOwnProperty(subject)) {
+              var val = subj[subject];
+              this.put([subject, predicate, object, val]);
+            }
+          }
+        }
       }
     }
   }
@@ -270,12 +309,18 @@ Hexastore.prototype.getPOS = function() {
 Hexastore.prototype.addOSP = function(element) {
   var obj = element;
   for (var object in obj) {
-    var subj = obj[object];
-    for (var subject in subj) {
-      var pred = subj[subject];
-      for (var predicate in pred) {
-        var val = pred[predicate];
-        this.put([subject, predicate, object, val]);
+    if (obj.hasOwnProperty(object)) {
+      var subj = obj[object];
+      for (var subject in subj) {
+        if (subj.hasOwnProperty(subject)) {
+          var pred = subj[subject];
+          for (var predicate in pred) {
+            if (pred.hasOwnProperty(predicate)) {
+              var val = pred[predicate];
+              this.put([subject, predicate, object, val]);
+            }
+          }
+        }
       }
     }
   }
@@ -294,12 +339,18 @@ Hexastore.prototype.getOSP = function() {
 Hexastore.prototype.addOPS = function(element) {
   var obj = element;
   for (var object in obj) {
-    var pred = obj[object];
-    for (var predicate in pred) {
-      var subj = pred[predicate];
-      for (var subject in subj) {
-        var val = subj[subject];
-        this.put([subject, predicate, object, val]);
+    if (obj.hasOwnProperty(object)) {
+      var pred = obj[object];
+      for (var predicate in pred) {
+        if (pred.hasOwnProperty(predicate)) {
+          var subj = pred[predicate];
+          for (var subject in subj) {
+            if (subj.hasOwnProperty(subject)) {
+              var val = subj[subject];
+              this.put([subject, predicate, object, val]);
+            }
+          }
+        }
       }
     }
   }
@@ -323,21 +374,21 @@ Hexastore.prototype.getOPS = function() {
 
 
 // Add object as a star of nodes, with name in the center, and name/prop1 around
-Hexastore.prototype.addJSObjectAsPath = function(obj,name,separator) {
+Hexastore.prototype.addJSObjectAsPath = function(obj, name, separator) {
   var actualseparator;
-  if(separator===undefined) {
+  if (separator === undefined) {
     actualseparator = "/";
   } else {
     actualseparator = separator;
   }
-  if(obj === Object(obj)) {
+  if (obj === Object(obj)) {
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
-        this.put([name,prop,this.addJSObjectAsPath(obj[prop],name+actualseparator+prop),true]);
+        this.put([name, prop, this.addJSObjectAsPath(obj[prop], name + actualseparator + prop), true]);
       }
     }
     return name;
-  } else if(typeof obj == 'string' || obj instanceof String) {
+  } else if (typeof obj === 'string' || obj instanceof String) {
     return obj;
   } else {
     return JSON.stringify(obj);
@@ -346,15 +397,15 @@ Hexastore.prototype.addJSObjectAsPath = function(obj,name,separator) {
 
 // Add object as a star of nodes with UUID names except for the leaves
 Hexastore.prototype.addJSObjectAsUUID = function(obj) {
-  if(obj === Object(obj)) {
-    var name=uuid.v4();
+  if (obj === Object(obj)) {
+    var name = uuid.v4();
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
-        this.put([name,prop,this.addJSObjectAsUUID(obj[prop]),true]);
+        this.put([name, prop, this.addJSObjectAsUUID(obj[prop]), true]);
       }
     }
     return name;
-  } else if(typeof obj == 'string' || obj instanceof String) {
+  } else if (typeof obj === 'string' || obj instanceof String) {
     return obj;
   } else {
     return JSON.stringify(obj);
@@ -363,15 +414,15 @@ Hexastore.prototype.addJSObjectAsUUID = function(obj) {
 
 // Add object as a star of nodes with JSON names except for the leaves
 Hexastore.prototype.addJSObjectAsJSON = function(obj) {
-  if(obj === Object(obj)) {
-    var name=JSON.stringify(obj);
+  if (obj === Object(obj)) {
+    var name = JSON.stringify(obj);
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
-        this.put([name,prop,this.addJSObjectAsJSON(obj[prop]),true]);
+        this.put([name, prop, this.addJSObjectAsJSON(obj[prop]), true]);
       }
     }
     return name;
-  } else if(typeof obj == 'string' || obj instanceof String) {
+  } else if (typeof obj === 'string' || obj instanceof String) {
     return obj;
   } else {
     return JSON.stringify(obj);
@@ -379,23 +430,29 @@ Hexastore.prototype.addJSObjectAsJSON = function(obj) {
 };
 
 // Make a copy of all facts related to a subject
-Hexastore.prototype.copySubject = function(subj,newsubj) {
-  var res = this.queryS__([subj,null,null]);
-  this.putAll(res.map(function(el){return [newsubj,el[1],el[2],el[3]];}));
+Hexastore.prototype.copySubject = function(subj, newsubj) {
+  var res = this.queryS__([subj, null, null]);
+  this.putAll(res.map(function(el) {
+    return [newsubj, el[1], el[2], el[3]];
+  }));
   return res.length;
 };
 
 // Make a copy of all facts related to a predicate
-Hexastore.prototype.copyPredicate = function(pred,newpred) {
-  var res = this.query_P_([null,pred,null]);
-  this.putAll(res.map(function(el){return [el[0],newpred,el[2],el[3]];}));
+Hexastore.prototype.copyPredicate = function(pred, newpred) {
+  var res = this.query_P_([null, pred, null]);
+  this.putAll(res.map(function(el) {
+    return [el[0], newpred, el[2], el[3]];
+  }));
   return res.length;
 };
 
 // Make a copy of all facts related to an object
-Hexastore.prototype.copyObject = function(obj,newobj) {
-  var res = this.query__O([null,null,obj]);
-  this.putAll(res.map(function(el){return [el[0],el[1],newobj,el[3]];}));
+Hexastore.prototype.copyObject = function(obj, newobj) {
+  var res = this.query__O([null, null, obj]);
+  this.putAll(res.map(function(el) {
+    return [el[0], el[1], newobj, el[3]];
+  }));
   return res.length;
 };
 
@@ -405,15 +462,21 @@ Hexastore.prototype.all = function() {
   var subj = this.spo;
   if (subj !== undefined) {
     for (var subject in subj) {
-      var pred = subj[subject];
-      if (pred !== undefined) {
-        for (var predicate in pred) {
-          var obj = pred[predicate];
-          if (obj !== undefined) {
-            for (var object in obj) {
-              var val = obj[object];
-              if (val !== undefined) {
-                res.push([subject, predicate, object, val]);
+      if (subj.hasOwnProperty(subject)) {
+        var pred = subj[subject];
+        if (pred !== undefined) {
+          for (var predicate in pred) {
+            if (pred.hasOwnProperty(predicate)) {
+              var obj = pred[predicate];
+              if (obj !== undefined) {
+                for (var object in obj) {
+                  if (obj.hasOwnProperty(object)) {
+                    var val = obj[object];
+                    if (val !== undefined) {
+                      res.push([subject, predicate, object, val]);
+                    }
+                  }
+                }
               }
             }
           }
@@ -427,24 +490,27 @@ Hexastore.prototype.all = function() {
 
 // Query the store for all facts with nothing specific (all facts)
 Hexastore.prototype.query___ = function(element) {
-  var s = element[0];
-  var p = element[1];
-  var o = element[2];
 
   var res = [];
 
   var subj = this.spo;
   if (subj !== undefined) {
     for (var subject in subj) {
-      var pred = subj[subject];
-      if (pred !== undefined) {
-        for (var predicate in pred) {
-          var obj = pred[predicate];
-          if (obj !== undefined) {
-            for (var object in obj) {
-              var val = obj[object];
-              if (val !== undefined) {
-                res.push([subject, predicate, object, val]);
+      if (subj.hasOwnProperty(subject)) {
+        var pred = subj[subject];
+        if (pred !== undefined) {
+          for (var predicate in pred) {
+            if (pred.hasOwnProperty(predicate)) {
+              var obj = pred[predicate];
+              if (obj !== undefined) {
+                for (var object in obj) {
+                  if (obj.hasOwnProperty(object)) {
+                    var val = obj[object];
+                    if (val !== undefined) {
+                      res.push([subject, predicate, object, val]);
+                    }
+                  }
+                }
               }
             }
           }
@@ -458,8 +524,6 @@ Hexastore.prototype.query___ = function(element) {
 // Query the store for all facts with specific subject
 Hexastore.prototype.queryS__ = function(element) {
   var s = element[0];
-  var p = element[1];
-  var o = element[2];
 
   var res = [];
 
@@ -468,12 +532,16 @@ Hexastore.prototype.queryS__ = function(element) {
     var pred = subj[s];
     if (pred !== undefined) {
       for (var predicate in pred) {
-        var obj = pred[predicate];
-        if (obj !== undefined) {
-          for (var object in obj) {
-            var val = obj[object];
-            if (val !== undefined) {
-              res.push([s, predicate, object, val]);
+        if (pred.hasOwnProperty(predicate)) {
+          var obj = pred[predicate];
+          if (obj !== undefined) {
+            for (var object in obj) {
+              if (obj.hasOwnProperty(object)) {
+                var val = obj[object];
+                if (val !== undefined) {
+                  res.push([s, predicate, object, val]);
+                }
+              }
             }
           }
         }
@@ -485,9 +553,7 @@ Hexastore.prototype.queryS__ = function(element) {
 
 // Query the store for all facts with specific predicate
 Hexastore.prototype.query_P_ = function(element) {
-  var s = element[0];
   var p = element[1];
-  var o = element[2];
 
   var res = [];
 
@@ -496,12 +562,16 @@ Hexastore.prototype.query_P_ = function(element) {
     var subj = pred[p];
     if (subj !== undefined) {
       for (var subject in subj) {
-        var obj = subj[subject];
-        if (obj !== undefined) {
-          for (var object in obj) {
-            var val = obj[object];
-            if (val !== undefined) {
-              res.push([subject, p, object, val]);
+        if (subj.hasOwnProperty(subject)) {
+          var obj = subj[subject];
+          if (obj !== undefined) {
+            for (var object in obj) {
+              if (obj.hasOwnProperty(object)) {
+                var val = obj[object];
+                if (val !== undefined) {
+                  res.push([subject, p, object, val]);
+                }
+              }
             }
           }
         }
@@ -513,8 +583,6 @@ Hexastore.prototype.query_P_ = function(element) {
 
 // Query the store for all facts with specific object
 Hexastore.prototype.query__O = function(element) {
-  var s = element[0];
-  var p = element[1];
   var o = element[2];
 
   var res = [];
@@ -524,12 +592,16 @@ Hexastore.prototype.query__O = function(element) {
     var pred = obj[o];
     if (pred !== undefined) {
       for (var predicate in pred) {
-        var subj = pred[predicate];
-        if (subj !== undefined) {
-          for (var subject in subj) {
-            var val = subj[subject];
-            if (val !== undefined) {
-              res.push([subject, predicate, o, val]);
+        if (pred.hasOwnProperty(predicate)) {
+          var subj = pred[predicate];
+          if (subj !== undefined) {
+            for (var subject in subj) {
+              if (subj.hasOwnProperty(subject)) {
+                var val = subj[subject];
+                if (val !== undefined) {
+                  res.push([subject, predicate, o, val]);
+                }
+              }
             }
           }
         }
@@ -543,7 +615,6 @@ Hexastore.prototype.query__O = function(element) {
 Hexastore.prototype.querySP_ = function(element) {
   var s = element[0];
   var p = element[1];
-  var o = element[2];
 
   var res = [];
 
@@ -554,9 +625,11 @@ Hexastore.prototype.querySP_ = function(element) {
       var obj = pred[p];
       if (obj !== undefined) {
         for (var object in obj) {
-          var val = obj[object];
-          if (val !== undefined) {
-            res.push([s, p, object, val]);
+          if (obj.hasOwnProperty(object)) {
+            var val = obj[object];
+            if (val !== undefined) {
+              res.push([s, p, object, val]);
+            }
           }
         }
       }
@@ -568,7 +641,6 @@ Hexastore.prototype.querySP_ = function(element) {
 
 // Query the store for all facts with specific predicate and object
 Hexastore.prototype.query_PO = function(element) {
-  var s = element[0];
   var p = element[1];
   var o = element[2];
 
@@ -581,9 +653,11 @@ Hexastore.prototype.query_PO = function(element) {
       var subj = obj[o];
       if (subj !== undefined) {
         for (var subject in subj) {
-          var val = subj[subject];
-          if (val !== undefined) {
-            res.push([subject, p, o, val]);
+          if (subj.hasOwnProperty(subject)) {
+            var val = subj[subject];
+            if (val !== undefined) {
+              res.push([subject, p, o, val]);
+            }
           }
         }
       }
@@ -596,7 +670,6 @@ Hexastore.prototype.query_PO = function(element) {
 // Query the store for all facts with specific subject and object
 Hexastore.prototype.queryS_O = function(element) {
   var s = element[0];
-  var p = element[1];
   var o = element[2];
 
   var res = [];
@@ -608,9 +681,11 @@ Hexastore.prototype.queryS_O = function(element) {
       var pred = obj[o];
       if (pred !== undefined) {
         for (var predicate in pred) {
-          var val = pred[predicate];
-          if (val !== undefined) {
-            res.push([s, predicate, o, val]);
+          if (pred.hasOwnProperty(predicate)) {
+            var val = pred[predicate];
+            if (val !== undefined) {
+              res.push([s, predicate, o, val]);
+            }
           }
         }
       }
@@ -830,7 +905,7 @@ Hexastore.prototype.doSearch = function(result, theQuery) {
 
 // Bootstrap a new search with an empty result
 Hexastore.prototype.search = function(query) {
-  result = {};
+  var result = {};
   return this.doSearch(result, query);
 };
 
