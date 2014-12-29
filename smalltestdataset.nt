@@ -1,255 +1,255 @@
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> <http://www.w3.org/2000/01/rdf-schema#label> "Thing" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> <http://www.w3.org/2000/01/rdf-schema#comment> "The Product Type of all Products" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> <http://purl.org/dc/elements/1.1/date> "2000-07-04"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> <http://www.w3.org/2000/01/rdf-schema#label> "amour dupable" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> <http://www.w3.org/2000/01/rdf-schema#comment> "lengthened galling outposts emulatively looming deplanes stinters forehanded interdisciplinary manoeuvred frankers pederasty heralds disrupts fishnet falsifiable absorbable appreciators undefinable draftable revindicates flashlamp insertion expurgations tarsier" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> <http://purl.org/dc/elements/1.1/date> "2000-06-26"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> <http://www.w3.org/2000/01/rdf-schema#label> "microprocessor mops reigned" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> <http://www.w3.org/2000/01/rdf-schema#comment> "antecedently nonyielding cocaines milligrams dimorphic shamming clawed hurts enchains jukeboxes mottoes brahminist embrocated quatrefoil harmonize guardants prayerfully adios restring coursing fisticuffs cordlessly augured fumigated academies splotches auctioning timeliness flushest ranching speedily gets nonsymbolic pyorrhea rales headpieces ladrons tightwire playtimes etherizes mistaught screechier casehardening placaters saurian summarization counterfeits skipping" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> <http://purl.org/dc/elements/1.1/date> "2000-07-05"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> <http://www.w3.org/2000/01/rdf-schema#label> "practiced" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> <http://www.w3.org/2000/01/rdf-schema#comment> "swarmed adjuratory fondled shiksas pourboire chortled distinctiveness fostered unchastened dehumanizes bulleted wieldy reaccession roentgenoscope minorcas nimbly birdhouses outclasses hazels traumatologies glaucomatous sabotages hexone porkier duplicating internee thermodynamically whereinsoever satirizing postformed fatigueless feasance remove unseats sheers stenographers unperceiving shipworms coshers prelim hispaniola impeaches rafting squelchy probationers countless bluejay decontaminator encipherments wading" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> <http://purl.org/dc/elements/1.1/date> "2000-07-14"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> <http://www.w3.org/2000/01/rdf-schema#label> "arteriography" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> <http://www.w3.org/2000/01/rdf-schema#comment> "hollowness unhealed cityward parring wishing pyromaniacs marbly pions boughed innervate gung inverts demoted comprehended stollen unadjudicated septuagenarians chaptered vocalists bennies unstably moppet cogging ethnics billhooks frenching squeamishly tyres weaseling chancroids pandered amirates relented" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> <http://purl.org/dc/elements/1.1/date> "2000-07-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType6> <http://www.w3.org/2000/01/rdf-schema#label> "huffiest tougheners interfering" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType6> <http://www.w3.org/2000/01/rdf-schema#comment> "shucker claviers haggles chorusses nonagons logrolls mathematically intradermal echoed grassier helmeted bristles gonging smidgen flunker atonements bestializes briefness vulgo discounter marooning sheaving neutralizations attains reconsiders glaceed lavers notified malevolently compensations lycanthropies rebroadcasting obliviously sunup arrestee tireless gayer interlinear backlogged encephala chronologist helplessly" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType6> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType6> <http://purl.org/dc/elements/1.1/date> "2000-06-28"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType7> <http://www.w3.org/2000/01/rdf-schema#label> "papuans womaned" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType7> <http://www.w3.org/2000/01/rdf-schema#comment> "teenaged lesbianism unplanted luminously ladyships optimisms protagonists topknots refracts fraternized maoist decimalization steppingstones greens manpowers chipper cognized eggheads abyssinian purblindness chattiest shutters churl nictating reconciliation distrustfulness solstitial rapidity bronzers gadded calicoes sandals geophysicists twaddler mystifier deploring panache" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType7> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType7> <http://purl.org/dc/elements/1.1/date> "2000-07-07"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType8> <http://www.w3.org/2000/01/rdf-schema#label> "unsalaried" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType8> <http://www.w3.org/2000/01/rdf-schema#comment> "crossbars avowedly misguiders trisection duodecimals unhandy lasher clawing annexed incubated unplanted fictionalizes sashed moderner neonatology taloned nominative intramural lounges pissoirs parasiticidal hewers stroker antitoxin fesses virtues carinae summarizes abutters beknighted strutters prepares minimizers remodeled anarchists spiders sensualists lulled bocci seismometer nickered" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType8> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType8> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType8> <http://purl.org/dc/elements/1.1/date> "2000-07-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType9> <http://www.w3.org/2000/01/rdf-schema#label> "weapons zeals" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType9> <http://www.w3.org/2000/01/rdf-schema#comment> "redeposit stepping aidmen baccarats rearms invasiveness foemen inkstand aircrew bravadoes necking enlivenment discolorations pillaging dispossessed pocketknives upsweeps monosyllables slitted secularized visualizer rescheduled graters sheepish airframes ninepin virulence ramshackle packthreads batiste" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType9> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType2> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType9> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType9> <http://purl.org/dc/elements/1.1/date> "2000-06-29"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType10> <http://www.w3.org/2000/01/rdf-schema#label> "sheeny" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType10> <http://www.w3.org/2000/01/rdf-schema#comment> "pastured priors ballades tormented towpaths transfused yahweh admonishments insertions afterwards nontemporally scrawlier luxes aphorise tediousness biogeochemistry plutocratic conjurer transnational achoo rehandling bended befogged obstreperously exhaled musks" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType10> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType10> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType10> <http://purl.org/dc/elements/1.1/date> "2000-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType11> <http://www.w3.org/2000/01/rdf-schema#label> "playacted" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType11> <http://www.w3.org/2000/01/rdf-schema#comment> "squeegeed disappointed gabbled misunderstand deriving obituaries eulogist saboteur sward maintops preterit auricled reddened befuddles sidelights reexchanged soothingly conscripts tigrish broguery distributing unconventionalized kvetches fomentation habituation elmy obeisances birdied pseudonymous cabby copulae easels checker exchequers remodifies spatulate upload ceramist kakis infuriation upholsterer plumberies incipiencies" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType11> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType11> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType11> <http://purl.org/dc/elements/1.1/date> "2000-06-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType12> <http://www.w3.org/2000/01/rdf-schema#label> "linguini repossession energize" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType12> <http://www.w3.org/2000/01/rdf-schema#comment> "superintendence egger sandworms dicotyledonous soliloquizing notcher teraphim meanders marines incandescence contortion pillaring cabmen scholium ensnarer tokyoites chichi conches disheartens tailcoats antecedently whitecomb forewing" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType12> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType12> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType12> <http://purl.org/dc/elements/1.1/date> "2000-07-05"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType13> <http://www.w3.org/2000/01/rdf-schema#label> "chaplets unharmful frizettes" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType13> <http://www.w3.org/2000/01/rdf-schema#comment> "wiseliest disunites storables helices eves aims drawler patchiest remigrated indicatives parleys wracking pignorated baboons bassist caramelize definer workup antinucleons chuckfull doozies seismographers stomaching relished wariest botulisms heartsick resided laminates uncouthness ballpoint tabour lipids unsolved chaffier radixes opportunism groins hearthstone gypsied monomials petrographers tints oyes veraciously unshapely" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType13> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType3> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType13> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType13> <http://purl.org/dc/elements/1.1/date> "2000-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType14> <http://www.w3.org/2000/01/rdf-schema#label> "dyspeptics indubitably" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType14> <http://www.w3.org/2000/01/rdf-schema#comment> "congruous values tampers pudgier hypothermic tinkered slouches hamstring clef raper deserves tidbits vinculum shopkeeper impresses cannonry discourses outgrowing rebutters haymaker allegorists inkles restorativeness unexcelled quintan vivification ensorceled preclusively respondencies imaginable nabob seductresses chaunters perlites spinally masterpieces credibleness biogeography kisses pepperer gruesomeness intercourse teleport charmed parsers flimsily" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType14> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType14> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType14> <http://purl.org/dc/elements/1.1/date> "2000-07-09"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType15> <http://www.w3.org/2000/01/rdf-schema#label> "redrafted tarting" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType15> <http://www.w3.org/2000/01/rdf-schema#comment> "kyat angler sabotages placarded saliently meandered effulgences terminators gendarmerie iguana titteringly laking copepods reactivate hazarded liveliness viscoid incarcerator distress declinable bacchants nontechnical remortgaged prettification bloater criticized teenybopper unhorses viniest swizzler annotatively babu gausses nonaddicting rued immovably mesomorphic" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType15> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType15> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType15> <http://purl.org/dc/elements/1.1/date> "2000-06-23"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType16> <http://www.w3.org/2000/01/rdf-schema#label> "engulfing" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType16> <http://www.w3.org/2000/01/rdf-schema#comment> "underfeed wrynecks inconsistency persuadably incinerator etiolated remend transportal millrun solarizes tarp prinks propitiates vegetarianism gars sanctifies toppled polkas nooning servicers whirred clingier outpoured echidnas desolates seismometer" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType16> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType16> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType16> <http://purl.org/dc/elements/1.1/date> "2000-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType17> <http://www.w3.org/2000/01/rdf-schema#label> "daftly volute outvoted" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType17> <http://www.w3.org/2000/01/rdf-schema#comment> "desperadoes easiest peery jughead lepton gamins rebated enthusing bullocks beheading extinguishes mudslinging surefire glands disinter savouriest stakeout desegregation pruners ocurred condones annoying retractors wharfed helipads saucers cassaba burundians quitclaiming conns rotting transpolar silkier romanticization misreporting reproof excoriates medics" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType17> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType4> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType17> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType17> <http://purl.org/dc/elements/1.1/date> "2000-07-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType18> <http://www.w3.org/2000/01/rdf-schema#label> "reglued renovators" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType18> <http://www.w3.org/2000/01/rdf-schema#comment> "reindexed wannest moonlights rattler maracas imposed coronach frizzling dunghill falteringly indigently canes confuters nervily boycotts sheepman supporting soundtrack crudities fumes barred antlers secretor pragmatical igniting cavitation preparer maturating inebriates diluvial" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType18> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType18> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType18> <http://purl.org/dc/elements/1.1/date> "2000-07-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType19> <http://www.w3.org/2000/01/rdf-schema#label> "onefold outproduces decalcomania" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType19> <http://www.w3.org/2000/01/rdf-schema#comment> "mouldiest sulfurized accommodator shrewdly rugging grumbled celebrators thereout paraphrases interjectional preshaped rationalizes lagoons fossate pinworms egomaniac throating toothaches scrubs tentatively toweling inputted chickpeas unlivable noncomplying knucks aerobes warpers location emulating hangings enfolder seascapes armourer expunging compressors" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType19> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType19> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType19> <http://purl.org/dc/elements/1.1/date> "2000-07-19"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType20> <http://www.w3.org/2000/01/rdf-schema#label> "umbellate" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType20> <http://www.w3.org/2000/01/rdf-schema#comment> "insurrectional bucking accommodations floors degaussing sisterhoods primogeniture stover contumelies fifteens atrociously flagellated microradiographically copes plexiglass fowled disincorporated braises mildly incompetencies virucide overembellishes perfectos dignities perdurability pryers overplaying monistic contraindicated trovers impulsed nulled stumper mackerels plentifully bullfight simpers toasting distributors" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType20> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType20> <http://purl.org/dc/elements/1.1/date> "2000-07-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType21> <http://www.w3.org/2000/01/rdf-schema#label> "mannas" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType21> <http://www.w3.org/2000/01/rdf-schema#comment> "frustration tubbiness wordstar consults reoccurrences commensurations grinning oles idealities harborers overdiversifying virginally schussed assessors superintendents mowing chapmen cains unmuzzle surtaxed brio managemental thermograph robustly subcommissions quando rani intermix astringents hognoses jailors braver" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType21> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType5> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType21> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType21> <http://purl.org/dc/elements/1.1/date> "2000-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1> <http://www.w3.org/2000/01/rdf-schema#label> "melanized" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1> <http://www.w3.org/2000/01/rdf-schema#comment> "saliently uninvited flinging vigilance vulnerability reneger hatters decrial domestically torc billeters mesalliances disturbances fabricators groschen aerometer guiltless threatens ivies alumin advertently magicking undiscriminating dilapidator milfoils fido dancer moderates orogenic storerooms pithed condenser flammably backsaw goggles idolatries anacondas hounds mothering ensky rapider toroids quadriplegia likers mullioning" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature1> <http://purl.org/dc/elements/1.1/date> "2000-06-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature2> <http://www.w3.org/2000/01/rdf-schema#label> "pants" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature2> <http://www.w3.org/2000/01/rdf-schema#comment> "sheaves grimmer redistills loaning kaliphs hawker progressional journalism backspaced crevasse disfunction deepening gestalts hammerlock tazzas ofttimes overestimated profounds prefabbed gypsied cerebric laserjet broncs foretokens smoker reerects anticipated somewhen feathering gargoyles excellency dehumanize misarranges justifier ponchos percolators moaning annexion pokeys" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature2> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature2> <http://purl.org/dc/elements/1.1/date> "2000-07-06"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature3> <http://www.w3.org/2000/01/rdf-schema#label> "soilages feeblemindedness arrhythmical" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature3> <http://www.w3.org/2000/01/rdf-schema#comment> "resorts comping christianize gears ranges cobs roscoes derogatoriness arguer polyandries susurrations sputterer arrestment meninges arming nabobisms conventicle hybridizer coffered caracol handpicking flatter uncurling climatically remora scuppering marketings carotin palatably zeroing smells smeariest capful microvolt subtopic" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature3> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature3> <http://purl.org/dc/elements/1.1/date> "2000-06-21"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4> <http://www.w3.org/2000/01/rdf-schema#label> "rectangles" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4> <http://www.w3.org/2000/01/rdf-schema#comment> "factiously propmistress triangulated everted pistolling canzona disapprovals linnet cribbages gravies rubbernecked bleachers buffeted vasodilation hussy vacillated determinedly italicize alacrities abscise tamperer mamboing disemboweling protectionist hacked hyperbolically droppings irritancies graceless kabob oblongly curares tinsmiths kingliness splosh backslider apprenticing baa" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature4> <http://purl.org/dc/elements/1.1/date> "2000-06-27"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature5> <http://www.w3.org/2000/01/rdf-schema#label> "valorizes stammels" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature5> <http://www.w3.org/2000/01/rdf-schema#comment> "slumbered tinhorn grubworms purchasers statisticians improvidently albanians manginess entomb elopements adviser gundog lambaste ultrasonics livings copped undraping cavorter freeloader beetroots antiheroes quietude sheathers huaraches beholden coagulator prosthetics ecclesiastically obsessed vitalities batwomen resorted donation puritans slummy oversells untractable oinking pussyfooted insensitivity egomanias megalithic hiccups reinducted" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature5> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature5> <http://purl.org/dc/elements/1.1/date> "2000-07-20"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature6> <http://www.w3.org/2000/01/rdf-schema#label> "reinduce balancing antiradicals" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature6> <http://www.w3.org/2000/01/rdf-schema#comment> "greeting largely fender rubbles unquote unalarming anthropologies strobilization accommodation terrestrially mollycoddling dehumanizing steppingstone orchestrally tenuousness yardsticks unneedful calamaries supplants endlessly impregnated heroize navvies studbook analogousness barometric coheirs elongations walking nonelectrically sirrees churchy petroleous coverlets unfamiliarly desensitizes useless autostradas infinitesimally gluttonies conjoins scabbily" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature6> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature6> <http://purl.org/dc/elements/1.1/date> "2000-06-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature7> <http://www.w3.org/2000/01/rdf-schema#label> "heroics biracialism courtrooms" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature7> <http://www.w3.org/2000/01/rdf-schema#comment> "capitalizer collapses netter backs reboils ablated whorls calumniations layering blurters dismortgaging commands expropriations vignetting trimly replicates autocracies synovial bullocks typifiers reinfect playwears auriform paupers mannered masers smoothly computer radioman hailed carefully civilization arrived fixative agedly glottologies pushily dognaps piscine alights" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature7> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature7> <http://purl.org/dc/elements/1.1/date> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature8> <http://www.w3.org/2000/01/rdf-schema#label> "skyjacked" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature8> <http://www.w3.org/2000/01/rdf-schema#comment> "sudsed deviated entryways periodontics olios civics intergalactic abrogations interviewees aimlessness ambivalently synovias sakis staffed pufferies outfielder punner huller idler yokelish semicircle" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature8> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature8> <http://purl.org/dc/elements/1.1/date> "2000-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature9> <http://www.w3.org/2000/01/rdf-schema#label> "daphnias" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature9> <http://www.w3.org/2000/01/rdf-schema#comment> "despatch females rubbings obtainers roofings thoughtfully punier handsbreadth adamantine glamorously medals overstretches malthus miscarriage ladened spermatozoa seasonally evanishes satisfactoriness prompted rescued wallets wayless demimondaine moonward conformism lathy aerators metacarpal intravaginal interfaces" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature9> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature9> <http://purl.org/dc/elements/1.1/date> "2000-06-29"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature10> <http://www.w3.org/2000/01/rdf-schema#label> "dichotomously abhorrences" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature10> <http://www.w3.org/2000/01/rdf-schema#comment> "dazzled delicto preexposing nutritionists wriest futuristic busings uneven depleted puritans nonresistant frankensteins manhattans reunifies crumbling sanding vouchering modeler shintoism washwomen pakistanis fineable misnumbered subdivide unimproved ascribed pecker abashed illogics tributaries bruin disjoints loyaler libs coleslaw elegizing reconvening brazened forcedly titillation bldg" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature10> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature10> <http://purl.org/dc/elements/1.1/date> "2000-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature11> <http://www.w3.org/2000/01/rdf-schema#label> "overambitiously" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature11> <http://www.w3.org/2000/01/rdf-schema#comment> "riprap nonaddictive endozoic noctambulation tempters miseries topper performances idahoan zebras enrolled flatted unbounded piastre anthropomorphisms stirs accusativeness clotheslines urbanisms grackles fishmeal bedevilling retouchable congas phaseal englishwoman thiamines strikers biddably hoarsening abbess gossips underspent doorplates massacred unclean sidearms useless scrawled egged" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature11> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature11> <http://purl.org/dc/elements/1.1/date> "2000-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature12> <http://www.w3.org/2000/01/rdf-schema#label> "asphyxiates bounds kirigami" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature12> <http://www.w3.org/2000/01/rdf-schema#comment> "pussyfooted spoonies plaudits pipits parimutuels writes dickered triadic quicksets gruntingly chancing sparkers comedones levelness heteroerotic reinvited indicatively mendings allegiance sulkily bod kneelers galvanizer keeling imbricate coziness gjetost saddening funning prescore cauls mollifiers barbarize unearth telephonist implores misbestow" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature12> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature12> <http://purl.org/dc/elements/1.1/date> "2000-06-25"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature13> <http://www.w3.org/2000/01/rdf-schema#label> "dogsbodies pouffs" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature13> <http://www.w3.org/2000/01/rdf-schema#comment> "whiskered unmerciful folderols occludes diddling diligence invaders gophers bedtimes tisane antiabortion detains traditionalize simpered galvanometers reeducates blinder frauleins nonfat bushes kibosh implemented trounces forewarning scrutinize macroscopical decoupage endorsees nestlers mismarked mirthfully" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature13> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature13> <http://purl.org/dc/elements/1.1/date> "2000-06-28"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature14> <http://www.w3.org/2000/01/rdf-schema#label> "sadisms obduction" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature14> <http://www.w3.org/2000/01/rdf-schema#comment> "chaws kvetch superficiality cowering galloot cars sagacities attenuated implications currycombing underarms semipro reptiles corrosives opprobriated irritability kennelling mahonia satanophobia primevally easier paddling damagers tutting sculker splenectomy wardenship galoots advertised cordoned slumped enshrouded gilders grunters armlet syncopates filterer shingling terminators minter gigabits odorless embolisms flightier recriminating quadroons magistracies patrilinies" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature14> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature14> <http://purl.org/dc/elements/1.1/date> "2000-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature15> <http://www.w3.org/2000/01/rdf-schema#label> "surfaces ambled wifehoods" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature15> <http://www.w3.org/2000/01/rdf-schema#comment> "yodler extorts majestical gobbled painfuller berhymed homophone tantalization oversleeps defusing pessimists crossbones realizing victimizations quadruplications sentimentalists ransomers measled hemorrhaging liver adhesions huskiest profeminists feudalists packman" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature15> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature15> <http://purl.org/dc/elements/1.1/date> "2000-07-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature16> <http://www.w3.org/2000/01/rdf-schema#label> "provisionally" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature16> <http://www.w3.org/2000/01/rdf-schema#comment> "urushiol unexcusably synclines apoplectically vends blowtorches offices logotypies pipings antisepticize outlies oceanauts defeatist melanites canaling drear unreconciled sweetness calamities slating leathering counterfeiters fours chatter tramlines pastiest floweret reconcilers bypassed eradicators lobbers" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature16> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature16> <http://purl.org/dc/elements/1.1/date> "2000-07-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature17> <http://www.w3.org/2000/01/rdf-schema#label> "tolerative" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature17> <http://www.w3.org/2000/01/rdf-schema#comment> "marriages endocrinologists seedsmen maximizers unequalled unsparingness syphon jeopardies arguses zombiisms reportages pawnee gravitates casqued meccas banjoes eddying fattening casuistic outclass aggressiveness wordiest" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature17> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature17> <http://purl.org/dc/elements/1.1/date> "2000-06-23"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature18> <http://www.w3.org/2000/01/rdf-schema#label> "memorialize hellenist" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature18> <http://www.w3.org/2000/01/rdf-schema#comment> "resuscitative curseder daringly licensers breathlessly crofters cloturing disbarment swainish exaggeration laster moldy bloated twiddled decreases cornrows pragmatists wester dustbins daylit waitings relinquishing provides compartmentally debutantes" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature18> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature18> <http://purl.org/dc/elements/1.1/date> "2000-06-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature19> <http://www.w3.org/2000/01/rdf-schema#label> "fumaroles puled" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature19> <http://www.w3.org/2000/01/rdf-schema#comment> "overviolent adjudicated leadworks oddities corrected rubberizes overexcited reloaded pureed interventionist telescoped egads rasing coaxers twiddler overgarment periodontics cryolite teawares bands resurveys chinking admixes" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature19> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature19> <http://purl.org/dc/elements/1.1/date> "2000-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature20> <http://www.w3.org/2000/01/rdf-schema#label> "beatification" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature20> <http://www.w3.org/2000/01/rdf-schema#comment> "triunes barmier rabbis bespatter filtration antitoxin grooved penances seining cochairing supplanter outnumbered bottoms affiancing ravishment prevalently uncorking entertainer raser musicianly wrongfulness splaying homonymies copepods antidepressants milfoils lethally spined prosecutable deferrers percussionist nerved activists rebaters tautening overanalyzed cognizer spondee mongrel diphtherian residency handiness bedraggles transsexuals pusillanimously winnings ochers floored underpaid" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature20> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature20> <http://purl.org/dc/elements/1.1/date> "2000-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature21> <http://www.w3.org/2000/01/rdf-schema#label> "globs tops memorability" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature21> <http://www.w3.org/2000/01/rdf-schema#comment> "outcastes administratively calculous abolitionism cooee porting rotationally lits paradisiacally profiters vomitous exhibiter calorimeters parlaying papooses footpaths tweezing importuned glucosic bookkeeper nevermore capons stentor posthaste commissioned kalifate ejects carsickness bittering thespians unincumbered dynes disservice deflation magnetos decreases demerits recalling hockshops grumped" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature21> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature21> <http://purl.org/dc/elements/1.1/date> "2000-07-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature22> <http://www.w3.org/2000/01/rdf-schema#label> "valerian obeah" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature22> <http://www.w3.org/2000/01/rdf-schema#comment> "accusatrix overstocks extortion politicoes haver literalness tureen assaults recuperated overgraze wilding brevities prefixed threated disoriented foghorn chartists thymy cerebrates thickset domiciling kalium pericardial bladed challises commixt tutankhamen" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature22> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature22> <http://purl.org/dc/elements/1.1/date> "2000-07-04"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature23> <http://www.w3.org/2000/01/rdf-schema#label> "encumbering" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature23> <http://www.w3.org/2000/01/rdf-schema#comment> "chondrite laddies commutation phallic henbits nepotists catacombs voiceprint cosmonaut mimer drillmasters doffs daimon riggings dislodges undergraduate frizzling pancreases abhorrence scampish swabbie jailbird attacher collocated leader loosing unprovoked orangeries toning lacing sculpted euphenics decentring kittenishly ophthalmological backspaces connectors specifics affaires unsubstantial lexically romaines pleats catfishes cytologies" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature23> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature23> <http://purl.org/dc/elements/1.1/date> "2000-07-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature24> <http://www.w3.org/2000/01/rdf-schema#label> "underparts heedfully" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature24> <http://www.w3.org/2000/01/rdf-schema#comment> "orneriness gaugers jeopardized daring corrects overinterest racism towable bailies dreck defines chittering nibbles subprincipal morns inarticulateness cribwork almanacs vapourers shticks underhandedness expiratory hippodromes triunes minarets reverbs yodelers archings entertains townish postulated disenfranchised loveably pulling exhausted unamortized disgusts burring brocket nosings litten sequestrable" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature24> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature24> <http://purl.org/dc/elements/1.1/date> "2000-07-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature25> <http://www.w3.org/2000/01/rdf-schema#label> "farmhouses shutterbug jarsful" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature25> <http://www.w3.org/2000/01/rdf-schema#comment> "dayroom fetted relapse calypsoes intenseness lavishly trets semicomatose decontaminate yammering amphitheaters reformating violoncellos kneehole dioritic appestats conjuncts stoppled coact jurywomen progressed kymograph foots hebraists bickerer meaningfully stigmatizes" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature25> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature25> <http://purl.org/dc/elements/1.1/date> "2000-06-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature26> <http://www.w3.org/2000/01/rdf-schema#label> "cadgy" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature26> <http://www.w3.org/2000/01/rdf-schema#comment> "enzymes minify yardmaster flusters underseas vacuums abbesses opposing murderess impulsing treadles pettifogged hawthorns brahmin gurgled electrosurgeries prizefights ambushed sociosexual touches resubmit faints tends inscribing snuggles cordialness" .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature26> <http://purl.org/dc/elements/1.1/publisher> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1> .
-<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature26> <http://purl.org/dc/elements/1.1/date> "2000-06-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType1> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType1> <rdf-schema#label> "Thing" .
+<bizer/bsbm/v01/instances/ProductType1> <rdf-schema#comment> "The Product Type of all Products" .
+<bizer/bsbm/v01/instances/ProductType1> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType1> <dc/elements/1.1/date> "2000-07-04"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType2> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType2> <rdf-schema#label> "amour dupable" .
+<bizer/bsbm/v01/instances/ProductType2> <rdf-schema#comment> "lengthened galling outposts emulatively looming deplanes stinters forehanded interdisciplinary manoeuvred frankers pederasty heralds disrupts fishnet falsifiable absorbable appreciators undefinable draftable revindicates flashlamp insertion expurgations tarsier" .
+<bizer/bsbm/v01/instances/ProductType2> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType1> .
+<bizer/bsbm/v01/instances/ProductType2> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType2> <dc/elements/1.1/date> "2000-06-26"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType3> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType3> <rdf-schema#label> "microprocessor mops reigned" .
+<bizer/bsbm/v01/instances/ProductType3> <rdf-schema#comment> "antecedently nonyielding cocaines milligrams dimorphic shamming clawed hurts enchains jukeboxes mottoes brahminist embrocated quatrefoil harmonize guardants prayerfully adios restring coursing fisticuffs cordlessly augured fumigated academies splotches auctioning timeliness flushest ranching speedily gets nonsymbolic pyorrhea rales headpieces ladrons tightwire playtimes etherizes mistaught screechier casehardening placaters saurian summarization counterfeits skipping" .
+<bizer/bsbm/v01/instances/ProductType3> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType1> .
+<bizer/bsbm/v01/instances/ProductType3> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType3> <dc/elements/1.1/date> "2000-07-05"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType4> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType4> <rdf-schema#label> "practiced" .
+<bizer/bsbm/v01/instances/ProductType4> <rdf-schema#comment> "swarmed adjuratory fondled shiksas pourboire chortled distinctiveness fostered unchastened dehumanizes bulleted wieldy reaccession roentgenoscope minorcas nimbly birdhouses outclasses hazels traumatologies glaucomatous sabotages hexone porkier duplicating internee thermodynamically whereinsoever satirizing postformed fatigueless feasance remove unseats sheers stenographers unperceiving shipworms coshers prelim hispaniola impeaches rafting squelchy probationers countless bluejay decontaminator encipherments wading" .
+<bizer/bsbm/v01/instances/ProductType4> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType1> .
+<bizer/bsbm/v01/instances/ProductType4> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType4> <dc/elements/1.1/date> "2000-07-14"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType5> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType5> <rdf-schema#label> "arteriography" .
+<bizer/bsbm/v01/instances/ProductType5> <rdf-schema#comment> "hollowness unhealed cityward parring wishing pyromaniacs marbly pions boughed innervate gung inverts demoted comprehended stollen unadjudicated septuagenarians chaptered vocalists bennies unstably moppet cogging ethnics billhooks frenching squeamishly tyres weaseling chancroids pandered amirates relented" .
+<bizer/bsbm/v01/instances/ProductType5> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType1> .
+<bizer/bsbm/v01/instances/ProductType5> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType5> <dc/elements/1.1/date> "2000-07-18"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType6> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType6> <rdf-schema#label> "huffiest tougheners interfering" .
+<bizer/bsbm/v01/instances/ProductType6> <rdf-schema#comment> "shucker claviers haggles chorusses nonagons logrolls mathematically intradermal echoed grassier helmeted bristles gonging smidgen flunker atonements bestializes briefness vulgo discounter marooning sheaving neutralizations attains reconsiders glaceed lavers notified malevolently compensations lycanthropies rebroadcasting obliviously sunup arrestee tireless gayer interlinear backlogged encephala chronologist helplessly" .
+<bizer/bsbm/v01/instances/ProductType6> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType2> .
+<bizer/bsbm/v01/instances/ProductType6> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType6> <dc/elements/1.1/date> "2000-06-28"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType7> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType7> <rdf-schema#label> "papuans womaned" .
+<bizer/bsbm/v01/instances/ProductType7> <rdf-schema#comment> "teenaged lesbianism unplanted luminously ladyships optimisms protagonists topknots refracts fraternized maoist decimalization steppingstones greens manpowers chipper cognized eggheads abyssinian purblindness chattiest shutters churl nictating reconciliation distrustfulness solstitial rapidity bronzers gadded calicoes sandals geophysicists twaddler mystifier deploring panache" .
+<bizer/bsbm/v01/instances/ProductType7> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType2> .
+<bizer/bsbm/v01/instances/ProductType7> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType7> <dc/elements/1.1/date> "2000-07-07"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType8> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType8> <rdf-schema#label> "unsalaried" .
+<bizer/bsbm/v01/instances/ProductType8> <rdf-schema#comment> "crossbars avowedly misguiders trisection duodecimals unhandy lasher clawing annexed incubated unplanted fictionalizes sashed moderner neonatology taloned nominative intramural lounges pissoirs parasiticidal hewers stroker antitoxin fesses virtues carinae summarizes abutters beknighted strutters prepares minimizers remodeled anarchists spiders sensualists lulled bocci seismometer nickered" .
+<bizer/bsbm/v01/instances/ProductType8> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType2> .
+<bizer/bsbm/v01/instances/ProductType8> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType8> <dc/elements/1.1/date> "2000-07-22"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType9> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType9> <rdf-schema#label> "weapons zeals" .
+<bizer/bsbm/v01/instances/ProductType9> <rdf-schema#comment> "redeposit stepping aidmen baccarats rearms invasiveness foemen inkstand aircrew bravadoes necking enlivenment discolorations pillaging dispossessed pocketknives upsweeps monosyllables slitted secularized visualizer rescheduled graters sheepish airframes ninepin virulence ramshackle packthreads batiste" .
+<bizer/bsbm/v01/instances/ProductType9> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType2> .
+<bizer/bsbm/v01/instances/ProductType9> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType9> <dc/elements/1.1/date> "2000-06-29"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType10> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType10> <rdf-schema#label> "sheeny" .
+<bizer/bsbm/v01/instances/ProductType10> <rdf-schema#comment> "pastured priors ballades tormented towpaths transfused yahweh admonishments insertions afterwards nontemporally scrawlier luxes aphorise tediousness biogeochemistry plutocratic conjurer transnational achoo rehandling bended befogged obstreperously exhaled musks" .
+<bizer/bsbm/v01/instances/ProductType10> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType3> .
+<bizer/bsbm/v01/instances/ProductType10> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType10> <dc/elements/1.1/date> "2000-07-13"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType11> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType11> <rdf-schema#label> "playacted" .
+<bizer/bsbm/v01/instances/ProductType11> <rdf-schema#comment> "squeegeed disappointed gabbled misunderstand deriving obituaries eulogist saboteur sward maintops preterit auricled reddened befuddles sidelights reexchanged soothingly conscripts tigrish broguery distributing unconventionalized kvetches fomentation habituation elmy obeisances birdied pseudonymous cabby copulae easels checker exchequers remodifies spatulate upload ceramist kakis infuriation upholsterer plumberies incipiencies" .
+<bizer/bsbm/v01/instances/ProductType11> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType3> .
+<bizer/bsbm/v01/instances/ProductType11> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType11> <dc/elements/1.1/date> "2000-06-22"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType12> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType12> <rdf-schema#label> "linguini repossession energize" .
+<bizer/bsbm/v01/instances/ProductType12> <rdf-schema#comment> "superintendence egger sandworms dicotyledonous soliloquizing notcher teraphim meanders marines incandescence contortion pillaring cabmen scholium ensnarer tokyoites chichi conches disheartens tailcoats antecedently whitecomb forewing" .
+<bizer/bsbm/v01/instances/ProductType12> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType3> .
+<bizer/bsbm/v01/instances/ProductType12> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType12> <dc/elements/1.1/date> "2000-07-05"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType13> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType13> <rdf-schema#label> "chaplets unharmful frizettes" .
+<bizer/bsbm/v01/instances/ProductType13> <rdf-schema#comment> "wiseliest disunites storables helices eves aims drawler patchiest remigrated indicatives parleys wracking pignorated baboons bassist caramelize definer workup antinucleons chuckfull doozies seismographers stomaching relished wariest botulisms heartsick resided laminates uncouthness ballpoint tabour lipids unsolved chaffier radixes opportunism groins hearthstone gypsied monomials petrographers tints oyes veraciously unshapely" .
+<bizer/bsbm/v01/instances/ProductType13> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType3> .
+<bizer/bsbm/v01/instances/ProductType13> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType13> <dc/elements/1.1/date> "2000-07-08"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType14> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType14> <rdf-schema#label> "dyspeptics indubitably" .
+<bizer/bsbm/v01/instances/ProductType14> <rdf-schema#comment> "congruous values tampers pudgier hypothermic tinkered slouches hamstring clef raper deserves tidbits vinculum shopkeeper impresses cannonry discourses outgrowing rebutters haymaker allegorists inkles restorativeness unexcelled quintan vivification ensorceled preclusively respondencies imaginable nabob seductresses chaunters perlites spinally masterpieces credibleness biogeography kisses pepperer gruesomeness intercourse teleport charmed parsers flimsily" .
+<bizer/bsbm/v01/instances/ProductType14> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType4> .
+<bizer/bsbm/v01/instances/ProductType14> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType14> <dc/elements/1.1/date> "2000-07-09"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType15> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType15> <rdf-schema#label> "redrafted tarting" .
+<bizer/bsbm/v01/instances/ProductType15> <rdf-schema#comment> "kyat angler sabotages placarded saliently meandered effulgences terminators gendarmerie iguana titteringly laking copepods reactivate hazarded liveliness viscoid incarcerator distress declinable bacchants nontechnical remortgaged prettification bloater criticized teenybopper unhorses viniest swizzler annotatively babu gausses nonaddicting rued immovably mesomorphic" .
+<bizer/bsbm/v01/instances/ProductType15> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType4> .
+<bizer/bsbm/v01/instances/ProductType15> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType15> <dc/elements/1.1/date> "2000-06-23"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType16> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType16> <rdf-schema#label> "engulfing" .
+<bizer/bsbm/v01/instances/ProductType16> <rdf-schema#comment> "underfeed wrynecks inconsistency persuadably incinerator etiolated remend transportal millrun solarizes tarp prinks propitiates vegetarianism gars sanctifies toppled polkas nooning servicers whirred clingier outpoured echidnas desolates seismometer" .
+<bizer/bsbm/v01/instances/ProductType16> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType4> .
+<bizer/bsbm/v01/instances/ProductType16> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType16> <dc/elements/1.1/date> "2000-07-16"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType17> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType17> <rdf-schema#label> "daftly volute outvoted" .
+<bizer/bsbm/v01/instances/ProductType17> <rdf-schema#comment> "desperadoes easiest peery jughead lepton gamins rebated enthusing bullocks beheading extinguishes mudslinging surefire glands disinter savouriest stakeout desegregation pruners ocurred condones annoying retractors wharfed helipads saucers cassaba burundians quitclaiming conns rotting transpolar silkier romanticization misreporting reproof excoriates medics" .
+<bizer/bsbm/v01/instances/ProductType17> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType4> .
+<bizer/bsbm/v01/instances/ProductType17> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType17> <dc/elements/1.1/date> "2000-07-17"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType18> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType18> <rdf-schema#label> "reglued renovators" .
+<bizer/bsbm/v01/instances/ProductType18> <rdf-schema#comment> "reindexed wannest moonlights rattler maracas imposed coronach frizzling dunghill falteringly indigently canes confuters nervily boycotts sheepman supporting soundtrack crudities fumes barred antlers secretor pragmatical igniting cavitation preparer maturating inebriates diluvial" .
+<bizer/bsbm/v01/instances/ProductType18> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType5> .
+<bizer/bsbm/v01/instances/ProductType18> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType18> <dc/elements/1.1/date> "2000-07-17"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType19> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType19> <rdf-schema#label> "onefold outproduces decalcomania" .
+<bizer/bsbm/v01/instances/ProductType19> <rdf-schema#comment> "mouldiest sulfurized accommodator shrewdly rugging grumbled celebrators thereout paraphrases interjectional preshaped rationalizes lagoons fossate pinworms egomaniac throating toothaches scrubs tentatively toweling inputted chickpeas unlivable noncomplying knucks aerobes warpers location emulating hangings enfolder seascapes armourer expunging compressors" .
+<bizer/bsbm/v01/instances/ProductType19> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType5> .
+<bizer/bsbm/v01/instances/ProductType19> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType19> <dc/elements/1.1/date> "2000-07-19"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType20> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType20> <rdf-schema#label> "umbellate" .
+<bizer/bsbm/v01/instances/ProductType20> <rdf-schema#comment> "insurrectional bucking accommodations floors degaussing sisterhoods primogeniture stover contumelies fifteens atrociously flagellated microradiographically copes plexiglass fowled disincorporated braises mildly incompetencies virucide overembellishes perfectos dignities perdurability pryers overplaying monistic contraindicated trovers impulsed nulled stumper mackerels plentifully bullfight simpers toasting distributors" .
+<bizer/bsbm/v01/instances/ProductType20> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType5> .
+<bizer/bsbm/v01/instances/ProductType20> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType20> <dc/elements/1.1/date> "2000-07-17"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductType21> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductType> .
+<bizer/bsbm/v01/instances/ProductType21> <rdf-schema#label> "mannas" .
+<bizer/bsbm/v01/instances/ProductType21> <rdf-schema#comment> "frustration tubbiness wordstar consults reoccurrences commensurations grinning oles idealities harborers overdiversifying virginally schussed assessors superintendents mowing chapmen cains unmuzzle surtaxed brio managemental thermograph robustly subcommissions quando rani intermix astringents hognoses jailors braver" .
+<bizer/bsbm/v01/instances/ProductType21> <rdf-schema#subClassOf> <bizer/bsbm/v01/instances/ProductType5> .
+<bizer/bsbm/v01/instances/ProductType21> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductType21> <dc/elements/1.1/date> "2000-07-15"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature1> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature1> <rdf-schema#label> "melanized" .
+<bizer/bsbm/v01/instances/ProductFeature1> <rdf-schema#comment> "saliently uninvited flinging vigilance vulnerability reneger hatters decrial domestically torc billeters mesalliances disturbances fabricators groschen aerometer guiltless threatens ivies alumin advertently magicking undiscriminating dilapidator milfoils fido dancer moderates orogenic storerooms pithed condenser flammably backsaw goggles idolatries anacondas hounds mothering ensky rapider toroids quadriplegia likers mullioning" .
+<bizer/bsbm/v01/instances/ProductFeature1> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature1> <dc/elements/1.1/date> "2000-06-22"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature2> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature2> <rdf-schema#label> "pants" .
+<bizer/bsbm/v01/instances/ProductFeature2> <rdf-schema#comment> "sheaves grimmer redistills loaning kaliphs hawker progressional journalism backspaced crevasse disfunction deepening gestalts hammerlock tazzas ofttimes overestimated profounds prefabbed gypsied cerebric laserjet broncs foretokens smoker reerects anticipated somewhen feathering gargoyles excellency dehumanize misarranges justifier ponchos percolators moaning annexion pokeys" .
+<bizer/bsbm/v01/instances/ProductFeature2> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature2> <dc/elements/1.1/date> "2000-07-06"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature3> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature3> <rdf-schema#label> "soilages feeblemindedness arrhythmical" .
+<bizer/bsbm/v01/instances/ProductFeature3> <rdf-schema#comment> "resorts comping christianize gears ranges cobs roscoes derogatoriness arguer polyandries susurrations sputterer arrestment meninges arming nabobisms conventicle hybridizer coffered caracol handpicking flatter uncurling climatically remora scuppering marketings carotin palatably zeroing smells smeariest capful microvolt subtopic" .
+<bizer/bsbm/v01/instances/ProductFeature3> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature3> <dc/elements/1.1/date> "2000-06-21"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature4> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature4> <rdf-schema#label> "rectangles" .
+<bizer/bsbm/v01/instances/ProductFeature4> <rdf-schema#comment> "factiously propmistress triangulated everted pistolling canzona disapprovals linnet cribbages gravies rubbernecked bleachers buffeted vasodilation hussy vacillated determinedly italicize alacrities abscise tamperer mamboing disemboweling protectionist hacked hyperbolically droppings irritancies graceless kabob oblongly curares tinsmiths kingliness splosh backslider apprenticing baa" .
+<bizer/bsbm/v01/instances/ProductFeature4> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature4> <dc/elements/1.1/date> "2000-06-27"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature5> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature5> <rdf-schema#label> "valorizes stammels" .
+<bizer/bsbm/v01/instances/ProductFeature5> <rdf-schema#comment> "slumbered tinhorn grubworms purchasers statisticians improvidently albanians manginess entomb elopements adviser gundog lambaste ultrasonics livings copped undraping cavorter freeloader beetroots antiheroes quietude sheathers huaraches beholden coagulator prosthetics ecclesiastically obsessed vitalities batwomen resorted donation puritans slummy oversells untractable oinking pussyfooted insensitivity egomanias megalithic hiccups reinducted" .
+<bizer/bsbm/v01/instances/ProductFeature5> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature5> <dc/elements/1.1/date> "2000-07-20"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature6> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature6> <rdf-schema#label> "reinduce balancing antiradicals" .
+<bizer/bsbm/v01/instances/ProductFeature6> <rdf-schema#comment> "greeting largely fender rubbles unquote unalarming anthropologies strobilization accommodation terrestrially mollycoddling dehumanizing steppingstone orchestrally tenuousness yardsticks unneedful calamaries supplants endlessly impregnated heroize navvies studbook analogousness barometric coheirs elongations walking nonelectrically sirrees churchy petroleous coverlets unfamiliarly desensitizes useless autostradas infinitesimally gluttonies conjoins scabbily" .
+<bizer/bsbm/v01/instances/ProductFeature6> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature6> <dc/elements/1.1/date> "2000-06-30"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature7> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature7> <rdf-schema#label> "heroics biracialism courtrooms" .
+<bizer/bsbm/v01/instances/ProductFeature7> <rdf-schema#comment> "capitalizer collapses netter backs reboils ablated whorls calumniations layering blurters dismortgaging commands expropriations vignetting trimly replicates autocracies synovial bullocks typifiers reinfect playwears auriform paupers mannered masers smoothly computer radioman hailed carefully civilization arrived fixative agedly glottologies pushily dognaps piscine alights" .
+<bizer/bsbm/v01/instances/ProductFeature7> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature7> <dc/elements/1.1/date> "2000-07-11"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature8> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature8> <rdf-schema#label> "skyjacked" .
+<bizer/bsbm/v01/instances/ProductFeature8> <rdf-schema#comment> "sudsed deviated entryways periodontics olios civics intergalactic abrogations interviewees aimlessness ambivalently synovias sakis staffed pufferies outfielder punner huller idler yokelish semicircle" .
+<bizer/bsbm/v01/instances/ProductFeature8> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature8> <dc/elements/1.1/date> "2000-07-08"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature9> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature9> <rdf-schema#label> "daphnias" .
+<bizer/bsbm/v01/instances/ProductFeature9> <rdf-schema#comment> "despatch females rubbings obtainers roofings thoughtfully punier handsbreadth adamantine glamorously medals overstretches malthus miscarriage ladened spermatozoa seasonally evanishes satisfactoriness prompted rescued wallets wayless demimondaine moonward conformism lathy aerators metacarpal intravaginal interfaces" .
+<bizer/bsbm/v01/instances/ProductFeature9> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature9> <dc/elements/1.1/date> "2000-06-29"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature10> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature10> <rdf-schema#label> "dichotomously abhorrences" .
+<bizer/bsbm/v01/instances/ProductFeature10> <rdf-schema#comment> "dazzled delicto preexposing nutritionists wriest futuristic busings uneven depleted puritans nonresistant frankensteins manhattans reunifies crumbling sanding vouchering modeler shintoism washwomen pakistanis fineable misnumbered subdivide unimproved ascribed pecker abashed illogics tributaries bruin disjoints loyaler libs coleslaw elegizing reconvening brazened forcedly titillation bldg" .
+<bizer/bsbm/v01/instances/ProductFeature10> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature10> <dc/elements/1.1/date> "2000-07-15"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature11> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature11> <rdf-schema#label> "overambitiously" .
+<bizer/bsbm/v01/instances/ProductFeature11> <rdf-schema#comment> "riprap nonaddictive endozoic noctambulation tempters miseries topper performances idahoan zebras enrolled flatted unbounded piastre anthropomorphisms stirs accusativeness clotheslines urbanisms grackles fishmeal bedevilling retouchable congas phaseal englishwoman thiamines strikers biddably hoarsening abbess gossips underspent doorplates massacred unclean sidearms useless scrawled egged" .
+<bizer/bsbm/v01/instances/ProductFeature11> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature11> <dc/elements/1.1/date> "2000-07-16"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature12> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature12> <rdf-schema#label> "asphyxiates bounds kirigami" .
+<bizer/bsbm/v01/instances/ProductFeature12> <rdf-schema#comment> "pussyfooted spoonies plaudits pipits parimutuels writes dickered triadic quicksets gruntingly chancing sparkers comedones levelness heteroerotic reinvited indicatively mendings allegiance sulkily bod kneelers galvanizer keeling imbricate coziness gjetost saddening funning prescore cauls mollifiers barbarize unearth telephonist implores misbestow" .
+<bizer/bsbm/v01/instances/ProductFeature12> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature12> <dc/elements/1.1/date> "2000-06-25"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature13> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature13> <rdf-schema#label> "dogsbodies pouffs" .
+<bizer/bsbm/v01/instances/ProductFeature13> <rdf-schema#comment> "whiskered unmerciful folderols occludes diddling diligence invaders gophers bedtimes tisane antiabortion detains traditionalize simpered galvanometers reeducates blinder frauleins nonfat bushes kibosh implemented trounces forewarning scrutinize macroscopical decoupage endorsees nestlers mismarked mirthfully" .
+<bizer/bsbm/v01/instances/ProductFeature13> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature13> <dc/elements/1.1/date> "2000-06-28"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature14> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature14> <rdf-schema#label> "sadisms obduction" .
+<bizer/bsbm/v01/instances/ProductFeature14> <rdf-schema#comment> "chaws kvetch superficiality cowering galloot cars sagacities attenuated implications currycombing underarms semipro reptiles corrosives opprobriated irritability kennelling mahonia satanophobia primevally easier paddling damagers tutting sculker splenectomy wardenship galoots advertised cordoned slumped enshrouded gilders grunters armlet syncopates filterer shingling terminators minter gigabits odorless embolisms flightier recriminating quadroons magistracies patrilinies" .
+<bizer/bsbm/v01/instances/ProductFeature14> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature14> <dc/elements/1.1/date> "2000-07-13"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature15> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature15> <rdf-schema#label> "surfaces ambled wifehoods" .
+<bizer/bsbm/v01/instances/ProductFeature15> <rdf-schema#comment> "yodler extorts majestical gobbled painfuller berhymed homophone tantalization oversleeps defusing pessimists crossbones realizing victimizations quadruplications sentimentalists ransomers measled hemorrhaging liver adhesions huskiest profeminists feudalists packman" .
+<bizer/bsbm/v01/instances/ProductFeature15> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature15> <dc/elements/1.1/date> "2000-07-17"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature16> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature16> <rdf-schema#label> "provisionally" .
+<bizer/bsbm/v01/instances/ProductFeature16> <rdf-schema#comment> "urushiol unexcusably synclines apoplectically vends blowtorches offices logotypies pipings antisepticize outlies oceanauts defeatist melanites canaling drear unreconciled sweetness calamities slating leathering counterfeiters fours chatter tramlines pastiest floweret reconcilers bypassed eradicators lobbers" .
+<bizer/bsbm/v01/instances/ProductFeature16> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature16> <dc/elements/1.1/date> "2000-07-18"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature17> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature17> <rdf-schema#label> "tolerative" .
+<bizer/bsbm/v01/instances/ProductFeature17> <rdf-schema#comment> "marriages endocrinologists seedsmen maximizers unequalled unsparingness syphon jeopardies arguses zombiisms reportages pawnee gravitates casqued meccas banjoes eddying fattening casuistic outclass aggressiveness wordiest" .
+<bizer/bsbm/v01/instances/ProductFeature17> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature17> <dc/elements/1.1/date> "2000-06-23"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature18> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature18> <rdf-schema#label> "memorialize hellenist" .
+<bizer/bsbm/v01/instances/ProductFeature18> <rdf-schema#comment> "resuscitative curseder daringly licensers breathlessly crofters cloturing disbarment swainish exaggeration laster moldy bloated twiddled decreases cornrows pragmatists wester dustbins daylit waitings relinquishing provides compartmentally debutantes" .
+<bizer/bsbm/v01/instances/ProductFeature18> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature18> <dc/elements/1.1/date> "2000-06-22"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature19> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature19> <rdf-schema#label> "fumaroles puled" .
+<bizer/bsbm/v01/instances/ProductFeature19> <rdf-schema#comment> "overviolent adjudicated leadworks oddities corrected rubberizes overexcited reloaded pureed interventionist telescoped egads rasing coaxers twiddler overgarment periodontics cryolite teawares bands resurveys chinking admixes" .
+<bizer/bsbm/v01/instances/ProductFeature19> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature19> <dc/elements/1.1/date> "2000-07-08"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature20> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature20> <rdf-schema#label> "beatification" .
+<bizer/bsbm/v01/instances/ProductFeature20> <rdf-schema#comment> "triunes barmier rabbis bespatter filtration antitoxin grooved penances seining cochairing supplanter outnumbered bottoms affiancing ravishment prevalently uncorking entertainer raser musicianly wrongfulness splaying homonymies copepods antidepressants milfoils lethally spined prosecutable deferrers percussionist nerved activists rebaters tautening overanalyzed cognizer spondee mongrel diphtherian residency handiness bedraggles transsexuals pusillanimously winnings ochers floored underpaid" .
+<bizer/bsbm/v01/instances/ProductFeature20> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature20> <dc/elements/1.1/date> "2000-07-16"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature21> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature21> <rdf-schema#label> "globs tops memorability" .
+<bizer/bsbm/v01/instances/ProductFeature21> <rdf-schema#comment> "outcastes administratively calculous abolitionism cooee porting rotationally lits paradisiacally profiters vomitous exhibiter calorimeters parlaying papooses footpaths tweezing importuned glucosic bookkeeper nevermore capons stentor posthaste commissioned kalifate ejects carsickness bittering thespians unincumbered dynes disservice deflation magnetos decreases demerits recalling hockshops grumped" .
+<bizer/bsbm/v01/instances/ProductFeature21> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature21> <dc/elements/1.1/date> "2000-07-12"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature22> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature22> <rdf-schema#label> "valerian obeah" .
+<bizer/bsbm/v01/instances/ProductFeature22> <rdf-schema#comment> "accusatrix overstocks extortion politicoes haver literalness tureen assaults recuperated overgraze wilding brevities prefixed threated disoriented foghorn chartists thymy cerebrates thickset domiciling kalium pericardial bladed challises commixt tutankhamen" .
+<bizer/bsbm/v01/instances/ProductFeature22> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature22> <dc/elements/1.1/date> "2000-07-04"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature23> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature23> <rdf-schema#label> "encumbering" .
+<bizer/bsbm/v01/instances/ProductFeature23> <rdf-schema#comment> "chondrite laddies commutation phallic henbits nepotists catacombs voiceprint cosmonaut mimer drillmasters doffs daimon riggings dislodges undergraduate frizzling pancreases abhorrence scampish swabbie jailbird attacher collocated leader loosing unprovoked orangeries toning lacing sculpted euphenics decentring kittenishly ophthalmological backspaces connectors specifics affaires unsubstantial lexically romaines pleats catfishes cytologies" .
+<bizer/bsbm/v01/instances/ProductFeature23> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature23> <dc/elements/1.1/date> "2000-07-17"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature24> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature24> <rdf-schema#label> "underparts heedfully" .
+<bizer/bsbm/v01/instances/ProductFeature24> <rdf-schema#comment> "orneriness gaugers jeopardized daring corrects overinterest racism towable bailies dreck defines chittering nibbles subprincipal morns inarticulateness cribwork almanacs vapourers shticks underhandedness expiratory hippodromes triunes minarets reverbs yodelers archings entertains townish postulated disenfranchised loveably pulling exhausted unamortized disgusts burring brocket nosings litten sequestrable" .
+<bizer/bsbm/v01/instances/ProductFeature24> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature24> <dc/elements/1.1/date> "2000-07-22"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature25> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature25> <rdf-schema#label> "farmhouses shutterbug jarsful" .
+<bizer/bsbm/v01/instances/ProductFeature25> <rdf-schema#comment> "dayroom fetted relapse calypsoes intenseness lavishly trets semicomatose decontaminate yammering amphitheaters reformating violoncellos kneehole dioritic appestats conjuncts stoppled coact jurywomen progressed kymograph foots hebraists bickerer meaningfully stigmatizes" .
+<bizer/bsbm/v01/instances/ProductFeature25> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature25> <dc/elements/1.1/date> "2000-06-22"^^<XMLSchema#date> .
+<bizer/bsbm/v01/instances/ProductFeature26> <rdf-syntax-ns#type> <bizer/bsbm/v01/vocabulary/ProductFeature> .
+<bizer/bsbm/v01/instances/ProductFeature26> <rdf-schema#label> "cadgy" .
+<bizer/bsbm/v01/instances/ProductFeature26> <rdf-schema#comment> "enzymes minify yardmaster flusters underseas vacuums abbesses opposing murderess impulsing treadles pettifogged hawthorns brahmin gurgled electrosurgeries prizefights ambushed sociosexual touches resubmit faints tends inscribing snuggles cordialness" .
+<bizer/bsbm/v01/instances/ProductFeature26> <dc/elements/1.1/publisher> <bizer/bsbm/v01/instances/StandardizationInstitution1> .
+<bizer/bsbm/v01/instances/ProductFeature26> <dc/elements/1.1/date> "2000-06-29"^^<XMLSchema#date> .

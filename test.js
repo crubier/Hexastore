@@ -1,7 +1,7 @@
 var chai = require('chai');
 chai.use(require('chai-fuzzy'));
 var assert = chai.assert;
-
+var fs = require('fs');
 var Hexastore = require('./index.js');
 
 var db;
@@ -354,7 +354,7 @@ describe('Read', function() {
       assert.equal(72,
         db
         .search([
-          ["<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1>", ["predicate"],
+          ["<bizer/bsbm/v01/instances/ProductType1>", ["predicate"],
             ["object"]
           ],
           [
@@ -368,9 +368,9 @@ describe('Read', function() {
         }).length);
     });
     it('precise search ', function() {
-      assert.equal('<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution1>',
+      assert.equal('<bizer/bsbm/v01/instances/StandardizationInstitution1>',
         db.search([
-          ["<http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType1>", "<http://purl.org/dc/elements/1.1/publisher>", ["publisher"]]
+          ["<bizer/bsbm/v01/instances/ProductType1>", "<dc/elements/1.1/publisher>", ["publisher"]]
         ])[0].publisher);
 
     });
@@ -392,6 +392,11 @@ describe('Import / Export', function() {
         }
       }
     });
+  });
+  after(function(){
+    fs.unlinkSync("hexastoretest1.zip");
+    fs.unlinkSync("hexastoretest1.nt");
+    fs.unlinkSync("hexastoretest1.json");
   });
   it('json', function() {
     assert.doesNotThrow(function() {
