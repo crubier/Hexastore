@@ -1,16 +1,3 @@
-db.find(
-  ['and', []
-    []
-
-  ]
-);
-
-
-
-
-
-
-
 and(
   fact(the("person"), "first name", "Vincent"),
   fact(the("person"), "last name", "Lecrubier"),
@@ -28,14 +15,17 @@ and(
   )
 );
 
-
-
+function val(obj) {
+  if (typeof obj === 'string' || obj instanceof String) {
+    return obj;
+  } else {
+    return JSON.stringify(obj);
+  }
+}
 
 function the(name, condition) {
 
 }
-
-
 
 function and() {
   return {
@@ -66,10 +56,32 @@ function equivalent(a, b) {
   return and(implies(a, b), implies(b, a));
 }
 
+function fact(s, p, o, v) {
+  return {
+    s: s,
+    p: p,
+    o: o,
+    v: v === undefined ? true : v
+  };
+}
 
 
 
 
+
+// Algorithme de normalisation
+// (1) Réecrire les equivalences
+//     ( φ ↔ ψ ) => ( ( φ → ψ ) ∧ ( ψ → φ ) )
+// (2) Réecrire les implications
+//     ( φ → ψ ) => ( ¬φ ∨ ψ)
+// (3) Réecrire en utilisant les lois de De Morgan :
+//     ¬( φ ∧ ψ ) => ( ¬φ ∨ ¬ψ )
+//     ¬( φ ∨ ψ ) => ( ¬φ ∧ ¬ψ )
+// (4) Annuler les doubles négations
+//     ¬( ¬φ ) => φ
+// (5) Réecrire en utilisant les lois de distributivité :
+//    ( φ ∨ ( ψ ∧ ζ ) ) => ( ( φ ∨ ψ ) ∧ ( φ ∨ ζ ) )
+//    ( ( φ ∧ ψ ) ∨ ζ ) => ( ( φ ∨ ζ ) ∧ ( ψ ∨ ζ ) )
 
 
 
@@ -96,15 +108,12 @@ Geometry2D = {
   SPX: function(f) {
     return null;
   },
-  SPO: function(element) {
-    var s = element[0];
-    var p = element[1];
-    var o = element[2];
+  SPO: function(f) {
     var res = [];
     switch (p) {
       case "inside":
-        if (inside(geomParse(s), geomParse(o))) {
-          res = append(res, [s, p, o, true]);
+        if (inside(geomParse(f.s), geomParse(f.o))) {
+          res = append(res, fact(f.s, f.p, f.o, true));
         }
         break;
     }
@@ -117,32 +126,87 @@ Identity = {
     return null;
   },
   XXO: function(f) {
-    return [
-      [f[2], "equals", f[2], true]
-    ];
+    return [fact(f.o, "equals", f.o, true)];
   },
   XPX: function(f) {
     return null;
   },
   XPO: function(f) {
-    return (f[1] === "equals") ? [
-      [f[2], "equals", f[2], true]
-    ] : null;
+    return (f.p === "equals") ? [fact(f.o, "equals", f.o, true)] : null;
   },
   SXX: function(f) {
-    return [
-      [f[0], "equals", f[0], true]
-    ];
+    return [fact(f.s, "equals", f.s, true)];
   },
   SXO: function(f) {
-    return (f[0] === f[2]) ? [f[0], "equals", f[2], true] : [];
+    return (f.s === f.o) ? [fact(f.s, "equals", f.o, true)] : [];
   },
   SPX: function(f) {
-    return (f[1] === "equals") ? [
-      [f[0], "equals", f[0], true]
-    ] : null;
+    return (f.p === "equals") ? [fact(f.s, "equals", f.s, true)] : null;
   },
   SPO: function(f) {
-    return (f[1] === "equals") ? ((f[0] === f[2]) ? [f[0], f[1], f[2], true] : []) : null;
+    return (f.p === "equals") ? ((f.s === f.o) ? [fact(f.s, f.p, f.o, true)] : []) : null;
+  }
+};
+
+
+
+
+// A theory is an object containing the 8 XXX functions : XXX, XXO, XPX, XPO,  SXX, SXO, SPX, SPO
+// The XXX functions :
+//   is null if the theory can't solve the query generally, need more information
+//   returns null if the theory can solve the query generally, but not this query in particular with its specific parameters
+//   returns [] if the theory can solve this query in particular and found no results
+//   returns [fact(...),fact(...)] if the theory can solve this query in particular and found results
+
+
+
+MonthInYear = {
+  XXX: {
+    count: function() {
+      return Infinity;
+    },
+    get: function() {}
+  },
+  XXO: {
+    count: function() {
+      return 12;
+    },
+    get: function() {}
+  },
+  XPX: {
+    count: function() {
+      return Infinity;
+    },
+    get: function() {}
+  },
+  XPO: {
+    count: function() {
+      return 12;
+    },
+    get: function() {}
+  },
+  SXX: {
+    count: function() {
+      return Infinity;
+    },
+    get: function() {}
+  },
+  SXO: {
+    count: function() {
+      return 1;
+    },
+    get: function() {}
+  },
+  SPX: {
+    count: function() {
+      return Infinity;
+    },
+    get: function() {}
+  },
+  SPO: {
+    count: function() {
+      return 1;
+    },
+    get: function() {}
   }
 };

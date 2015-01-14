@@ -30,7 +30,6 @@ gulp.task ('test',['clean'],function(cb) {
   .on('error',onError);
 });
 
-
 // gulp.task('test-report', function() {
 //   return gulp.src(['test.js'])
 //   .pipe(mocha({reporter:"doc"}))
@@ -48,7 +47,7 @@ gulp.task('coveralls',['test'], function() {
 
 gulp.task('watch', function() {
   watching=true;
-  gulp.watch('**/*.js', ['test']);
+  gulp.watch('*.js', ['test']);
 });
 
 gulp.task('default', ['coveralls']);

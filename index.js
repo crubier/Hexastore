@@ -373,6 +373,10 @@ Hexastore.prototype.getOPS = function() {
 
 
 
+
+// ORM functions
+
+
 // Add object as a star of nodes, with name in the center, and name/prop1 around
 Hexastore.prototype.addJSObjectAsPath = function(obj, name, separator) {
   var actualseparator;
@@ -384,7 +388,7 @@ Hexastore.prototype.addJSObjectAsPath = function(obj, name, separator) {
   if (obj === Object(obj)) {
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
-        this.put([name, prop, this.addJSObjectAsPath(obj[prop], name + actualseparator + prop), true]);
+        this.put([name, prop, this.addJSObjectAsPath(obj[prop], name + actualseparator + prop,actualseparator), true]);
       }
     }
     return name;
@@ -428,6 +432,29 @@ Hexastore.prototype.addJSObjectAsJSON = function(obj) {
     return JSON.stringify(obj);
   }
 };
+
+// Add object as a star of nodes, using UUID by default
+Hexastore.prototype.addJSObject = Hexastore.prototype.addJSObjectAsUUID;
+
+// Add object as a star of nodes with JSON names except for the leaves
+Hexastore.prototype.getJSObject = function(name) {
+  //TODO
+  var res = this.querySXX([name,null,null]);
+  var obj = {};
+  for(var i=0;i<res.length;i++){
+    obj[res[1]]=this.getJSObject(res[2]);
+  }
+  return obj;
+};
+
+
+
+
+
+
+
+
+// Copy functions
 
 // Make a copy of all facts related to a subject
 Hexastore.prototype.copySubject = function(subj, newsubj) {
@@ -486,6 +513,19 @@ Hexastore.prototype.all = function() {
   }
   return res;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+// Hexastore specific Query functions
 
 
 // Query the store for all facts with nothing specific (all facts)
