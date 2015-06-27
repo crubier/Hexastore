@@ -882,6 +882,10 @@ Hexastore.prototype.queryDispatch = function(queryElement) {
 // }
 
 // Take a query, and instantiate varibles in it, i.e. replacing variables instances with values from a result
+// Example
+// result = {ok:5}
+// theQuery = [["joe","is",["ok"]]]
+// return  =  [["joe","is",5]]
 instantiateVariablesInQuery = function(result, theQuery) {
   var query = theQuery.slice().map(function(x) {
     return x.slice();

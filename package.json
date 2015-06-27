@@ -1,6 +1,6 @@
 {
   "name": "hexastore",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A fast, pure javascript triple store implementation, also useful as a graph database",
   "main": "index.js",
   "scripts": {

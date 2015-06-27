@@ -1,4 +1,8 @@
-![](http://crubier.github.io/Hexastore/HexastoreLogo.svg)
+# Deprecated
+
+Go check the [factis package](https://www.npmjs.com/package/factis) and [factis.io](http://factis.io) instead !
+
+# Old description
 
 A fast, pure javascript triple store implementation, also useful as a graph database. Works in any browser, with browserify or webpack. Early development, API is subject to changes.
 

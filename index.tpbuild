@@ -1,0 +1,3 @@
+pandoc $TEXPAD_ROOTFILE_NO_EXT.md --to=html --output $TEXPAD_ROOTFILE_NO_EXT.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML --standalone  --highlight-style=pygments --template=template.html --table-of-contents --toc-depth=3
+
+pandoc $TEXPAD_ROOTFILE_NO_EXT.md --to=latex --highlight-style=pygments --template=template.tex --latex-engine=xelatex --table-of-contents --toc-depth=3 --listings --standalone --number-sections --output $TEXPAD_ROOTFILE_NO_EXT.pdf
